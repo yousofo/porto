@@ -1,15 +1,17 @@
 {
-  "name": "yousefn",
+  "name": "port2",
   "version": "1.0.0",
   "description": "",
-  "main": "main.js",
-  "type": "module",
+  "main": "index.js",
+  "dependencies": {
+    "ssr-window": "^4.0.2",
+    "swiper": "^9.3.0"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [],
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "swiper": "^9.2.3"
-  }
+  "license": "ISC"
 }

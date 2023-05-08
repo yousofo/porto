@@ -71,6 +71,7 @@ $hexagon-size: 80px;
         width: fit-content;
         background-color: $naviocn;
         border-radius: 8px;
+        cursor: pointer;
         i {
           font-size: 1.5rem;
           animation: rotate1 linear infinite 10s;
@@ -133,7 +134,7 @@ $hexagon-size: 80px;
         // background-color: rgb(18, 18, 18);
         .color {
           width: 100%;
-          height: 50%;
+          height: 40%;
           position: absolute;
           top: 0;
           left: 0;
@@ -191,38 +192,103 @@ $hexagon-size: 80px;
             width: 100%;
             display: flex;
             flex-direction: column;
-            gap: 30px;
+            gap: 15px;
             .text {
               p {
-                font-size: 1.5rem;
-                line-height: 1.5;
+                font-size: 1.6rem;
+                line-height: 1.3;
               }
             }
-            .skills {
+            .text2 {
               display: flex;
-              position: relative;
-              justify-content: right;
-              padding-right: 15px;
-              // gap: ($hexagon-size / 3);
-              .col {
+              justify-content: space-between;
+              .text2-con {
                 display: flex;
                 flex-direction: column;
-                gap: 10px;
+                overflow: hidden;
+                gap: 15px;
+                p {
+                  font-size: 1.3rem;
+                  line-height: 1.3;
+                }
+                .offers {
+                  p {
+                    font-size: 1.1rem;
+                    position: relative;
+                    z-index: 1;
+                    span {
+                      color: rgb(255, 0, 157);
+                      position: relative;
+                      z-index: -2;
+                      animation: offercolor 12s linear infinite;
+                    }
+                    &::before {
+                      content: "";
+                      position: absolute;
+                      background: linear-gradient(
+                        to right,
+                        rgba(17, 17, 17, 0),
+                        rgb(17, 17, 17, 0.8),
+                        rgba(17, 17, 17, 0),
+                      );
+                      width: 100%;
+                      height: 100%;
+                      top: 0;
+                      z-index: -1;
+                      left: 0;
+                      animation: offerlayer 4s infinite ;
+                    }
+                  }
+                  z-index: 2;
+                  position: relative;
+                  @keyframes offercolor {
+                    0%,
+                    100% {
+                      color: rgb(189, 51, 51);
+                    }
+                    33% {
+                      color: rgb(197, 199, 56);
+                    }
+                    67%{
+                      color: rgb(61, 199, 56);
+                    }
+                  }
+                  @keyframes offerlayer {
+                    0% {
+                      left: -100%;
+                    }
+                    100% {
+                      left: 100%;
+                    }
+                  }
+                }
+              }
+              .skills {
+                display: flex;
                 position: relative;
-              }
-              .col2 {
-                top: ($hexagon-size / 2 + 5px);
-                right: -10px;
-              }
-              .col3 {
-                right: -20px;
-              }
-              .col4 {
-                top: ($hexagon-size / 2 + 5px);
-                right: -30px;
-              }
-              .col5 {
-                right: -40px;
+                justify-content: right;
+                // padding-right: 15px;
+                margin-top: 30px;
+                .col {
+                  display: flex;
+                  flex-direction: column;
+                  gap: 10px;
+                  position: relative;
+                }
+                .col2 {
+                  top: ($hexagon-size / 2 + 5px);
+                  right: -10px;
+                }
+                .col3 {
+                  right: -20px;
+                }
+                .col4 {
+                  top: ($hexagon-size / 2 + 5px);
+                  right: -30px;
+                }
+                .col5 {
+                  right: -40px;
+                }
               }
             }
           }
@@ -284,9 +350,9 @@ $hexagon-size: 80px;
       translate: -50% 50%;
       transition: 0.3s;
     }
-    .overlay{
+    .overlay {
       display: flex;
-      span{
+      span {
         display: none;
       }
     }
@@ -297,7 +363,7 @@ $hexagon-size: 80px;
     height: ($hexagon-size * 1.2);
     width: ($hexagon-size * 1.2);
     aspect-ratio: 1;
-    transition: .3s;
+    transition: 0.3s;
     left: -43%;
     border-radius: 50%;
     top: -10%;
@@ -357,40 +423,43 @@ $hexagon-size: 80px;
   &.active {
     translate: 0;
     &.cust1 {
-      transition: 0.5s 0s;
+      transition: 0.5s 0s ease-out;
     }
     &.cust2 {
-      transition: 0.5s 0.1s;
+      transition: 0.5s 0.1s ease-out;
     }
     &.cust3 {
-      transition: 0.5s 0.2s;
+      transition: 0.5s 0.2s ease-out;
     }
     &.cust4 {
-      transition: 0.5s 0.3s;
+      transition: 0.5s 0.3s ease-out;
     }
     &.cust5 {
-      transition: 0.5s 0.4s;
+      transition: 0.5s 0.4s ease-out;
     }
     &.cust6 {
-      transition: 0.5s 0.5s;
+      transition: 0.5s 0.5s ease-out;
     }
     &.cust7 {
-      transition: 0.5s 0.6s;
+      transition: 0.5s 0.6s ease-out;
     }
     &.cust8 {
-      transition: 0.5s 0.7s;
+      transition: 0.5s 0.7s ease-out;
     }
     &.cust9 {
-      transition: 0.5s 0.8s;
+      transition: 0.5s 0.8s ease-out;
     }
     &.cust10 {
-      transition: 0.5s 0.9s;
+      transition: 0.5s 0.9s ease-out;
     }
     &.cust11 {
-      transition: 0.5s 1s;
+      transition: 0.5s 1s ease-out;
     }
     &.cust12 {
-      transition: 0.5s 1.1s;
+      transition: 0.5s 1.1s ease-out;
+    }
+    &.cust13 {
+      transition: 0.5s 1.2s ease-out;
     }
   }
 }
@@ -429,4 +498,7 @@ $hexagon-size: 80px;
 }
 .hex11 {
   background-color: rgb(127, 17, 249);
+}
+.hex13 {
+  background-color: rgb(49, 120, 198);
 }

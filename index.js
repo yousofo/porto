@@ -1,5 +1,6 @@
 const aboutBtn = document.querySelector("#aboutBtn");
 const homeBtn = document.querySelector("#homeBtn");
+const contactBtn = document.querySelector("#contactBtn");
 const swiper1 = new Swiper(".swiper1", {
   loop: true,
   slidesPerView: 1,
@@ -18,13 +19,13 @@ swiper1.on("slideChange", () => {
         e.classList.remove("active");
       });
 });
-aboutBtn.addEventListener("click", () => {
-  swiper1.slideTo(1);
-});
+
 homeBtn.addEventListener("click", () => {
   swiper1.slideTo(0);
 });
-// const swiper1Int = setInterval(() => {
-//   swiper1.slideNext();
-// }, 2000);
-// swiper1.on("touchStart",(e)=>clearInterval(swiper1Int));
+aboutBtn.addEventListener("click", () => {
+  swiper1.slideTo(1);
+});
+contactBtn.addEventListener("click", () => {
+  swiper1.slideTo(2);
+});
