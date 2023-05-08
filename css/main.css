@@ -1,0 +1,412 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  line-height: 1;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+img {
+  display: flex;
+}
+
+@keyframes colorChange {
+  0%, 100% {
+    background-color: rgb(31, 16, 71);
+  }
+  25% {
+    background-color: rgb(46, 11, 49);
+  }
+  50% {
+    background-color: rgb(10, 41, 12);
+  }
+  75% {
+    background-color: rgb(12, 41, 49);
+  }
+}
+.port .port-con {
+  position: relative;
+}
+.port .port-con .nav {
+  background-color: rgba(31, 31, 31, 0.507);
+  display: flex;
+  padding: 6px;
+  gap: 5px;
+  width: -moz-max-content;
+  width: max-content;
+  border-radius: 8px;
+  position: absolute;
+  bottom: 3vh;
+  left: 50%;
+  translate: -50%;
+  z-index: 99999999;
+}
+.port .port-con .nav * {
+  color: rgb(182, 182, 182);
+  transition: 0.3s;
+  font-weight: 500;
+}
+.port .port-con .nav i {
+  font-weight: bold;
+}
+.port .port-con .nav .icon {
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: rgb(34, 34, 34);
+  border-radius: 8px;
+}
+.port .port-con .nav .icon i {
+  font-size: 1.5rem;
+  animation: rotate1 linear infinite 10s;
+  color: white;
+  padding: 15px;
+}
+.port .port-con .nav .links {
+  display: flex;
+  gap: 4px;
+  display: flex;
+  border-radius: 8px;
+  align-items: center;
+  background-color: rgb(53, 53, 53);
+  padding: 5px;
+}
+.port .port-con .nav .links li {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  border: 1px solid rgb(75, 75, 75);
+  padding: 12px;
+  cursor: pointer;
+}
+.port .port-con .nav .links li span {
+  font-size: 0.75rem;
+}
+.port .port-con .nav .links li:hover {
+  border: 1px solid rgb(255, 255, 255);
+}
+.port .port-con .nav .links li:hover span {
+  color: rgb(225, 252, 255);
+}
+.port .port-con .nav > .recent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 13px;
+  background-color: rgb(255, 74, 19);
+  border-radius: 8px;
+  gap: 4px;
+}
+.port .port-con .nav > .recent span {
+  color: black;
+}
+.port .port-con .main {
+  background-color: rgb(34, 34, 34);
+  padding-right: 0;
+}
+.port .port-con .main .main-con {
+  display: flex;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(17, 17, 17);
+}
+.port .port-con .main .main-con .color {
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgb(17, 17, 17);
+  animation: colorChange 10s linear infinite;
+}
+.port .port-con .main .main-con .color::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(17, 17, 17, 0.6), rgb(17, 17, 17));
+}
+.port .port-con .main .main-con .name {
+  width: 100%;
+  max-width: 1650px;
+  margin: auto;
+  height: 100%;
+  padding: 30px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.port .port-con .main .main-con .name .name-con {
+  color: white;
+  font-size: 2.5rem;
+  letter-spacing: 5px;
+}
+.port .port-con .main .main-con .name .text-con {
+  margin-top: 30px;
+  color: white;
+  max-width: 650px;
+  font-size: 1.5rem;
+}
+.port .port-con .main .main-con .name .text-con p {
+  line-height: 1.5;
+}
+.port .port-con .main .main-con .about {
+  width: 100%;
+  max-width: 1500px;
+  margin: auto;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  color: white;
+}
+.port .port-con .main .main-con .about .about-con {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.port .port-con .main .main-con .about .about-con .text p {
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+.port .port-con .main .main-con .about .about-con .skills {
+  display: flex;
+  position: relative;
+  justify-content: right;
+  padding-right: 15px;
+}
+.port .port-con .main .main-con .about .about-con .skills .col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+}
+.port .port-con .main .main-con .about .about-con .skills .col2 {
+  top: 45px;
+  right: -10px;
+}
+.port .port-con .main .main-con .about .about-con .skills .col3 {
+  right: -20px;
+}
+.port .port-con .main .main-con .about .about-con .skills .col4 {
+  top: 45px;
+  right: -30px;
+}
+.port .port-con .main .main-con .about .about-con .skills .col5 {
+  right: -40px;
+}
+
+.swiper {
+  z-index: 99999 !important;
+  width: 100%;
+  height: 100vh;
+}
+
+.swiper-slide {
+  height: 100%;
+}
+
+@keyframes rotate1 {
+  to {
+    transform: rotate3d(0, 1, 0, 360deg);
+  }
+}
+@keyframes move1 {
+  0%, 100% {
+    translate: 150px 0;
+  }
+  25% {
+    translate: 0 100px;
+  }
+  50% {
+    translate: -150px 0;
+  }
+  75% {
+    translate: 0 -100px;
+  }
+}
+.cust {
+  width: 88.8888888889px;
+  display: flex;
+  justify-content: center;
+}
+
+.hexagon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 51.6px;
+  height: 80px;
+  border-radius: 8px;
+  transition: transform 400ms ease;
+  background-image: none;
+  position: relative;
+}
+.hexagon:hover {
+  transform: rotate(30deg);
+}
+.hexagon:hover .hex-name {
+  opacity: 1;
+  bottom: 50%;
+  rotate: -30deg;
+  translate: -50% 50%;
+  transition: 0.3s;
+}
+.hexagon:hover .overlay {
+  display: flex;
+}
+.hexagon:hover .overlay span {
+  display: none;
+}
+.hexagon .overlay {
+  display: none;
+  position: absolute;
+  height: 96px;
+  width: 96px;
+  aspect-ratio: 1;
+  transition: 0.3s;
+  left: -43%;
+  border-radius: 50%;
+  top: -10%;
+  background-color: rgba(17, 17, 17, 0.9);
+  z-index: 99999;
+  justify-content: center;
+  align-items: center;
+}
+.hexagon .overlay span {
+  margin-top: 25px;
+}
+.hexagon.learning .overlay {
+  display: flex;
+}
+.hexagon:before, .hexagon:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  background-image: inherit;
+  background-color: inherit;
+  border-radius: inherit;
+}
+.hexagon:before {
+  transform: rotate(60deg);
+}
+.hexagon:after {
+  transform: rotate(-60deg);
+}
+.hexagon > img {
+  position: relative;
+  z-index: 399;
+  width: 100%;
+}
+.hexagon .hex-name {
+  position: absolute;
+  width: -moz-fit-content;
+  width: fit-content;
+  opacity: 0;
+  left: 50%;
+  bottom: 0;
+  translate: -50% 0;
+  text-align: center;
+  z-index: 99999999;
+}
+
+.cust {
+  translate: -2000px 1000px;
+}
+.cust.active {
+  translate: 0;
+}
+.cust.active.cust1 {
+  transition: 0.5s 0s;
+}
+.cust.active.cust2 {
+  transition: 0.5s 0.1s;
+}
+.cust.active.cust3 {
+  transition: 0.5s 0.2s;
+}
+.cust.active.cust4 {
+  transition: 0.5s 0.3s;
+}
+.cust.active.cust5 {
+  transition: 0.5s 0.4s;
+}
+.cust.active.cust6 {
+  transition: 0.5s 0.5s;
+}
+.cust.active.cust7 {
+  transition: 0.5s 0.6s;
+}
+.cust.active.cust8 {
+  transition: 0.5s 0.7s;
+}
+.cust.active.cust9 {
+  transition: 0.5s 0.8s;
+}
+.cust.active.cust10 {
+  transition: 0.5s 0.9s;
+}
+.cust.active.cust11 {
+  transition: 0.5s 1s;
+}
+.cust.active.cust12 {
+  transition: 0.5s 1.1s;
+}
+
+.hex1 {
+  background-color: rgb(33, 150, 243);
+}
+
+.hex2 {
+  background-color: rgb(255, 87, 34);
+}
+
+.hex3 {
+  background-color: rgb(32, 35, 43);
+}
+
+.hex4,
+.hex6,
+.hex8,
+.hex12 {
+  background-color: white;
+}
+
+.hex5 {
+  background-color: rgb(38, 45, 58);
+}
+
+.hex7 {
+  background-color: rgb(241, 196, 15);
+}
+
+.hex9 {
+  background-color: rgb(0, 30, 43);
+}
+.hex9 img {
+  width: 140%;
+}
+
+.hex10 {
+  background: rgb(9, 9, 1);
+}
+
+.hex11 {
+  background-color: rgb(127, 17, 249);
+}/*# sourceMappingURL=main.css.map */
