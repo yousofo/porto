@@ -10,12 +10,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
       rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
     />
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+      href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+      integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+      crossorigin=""
     />
   </head>
 
@@ -219,17 +221,50 @@
                 <div class="swiper-slide">
                   <div class="contact">
                     <div class="contact-con">
-                      <form action="mail.php" method="POST">
-                        <label for="name">Name:</label>
-                        <input type="text" name="name" id="name" />
-                        <label for="email">Email:</label>
-                        <input type="email" name="email" id="email" />
-                        <label for="subject">Subject:</label>
-                        <input type="text" name="subject" id="subject" />
-                        <label for="message">Message</label>
-                        <textarea name="message" cols="30" rows="10"></textarea>
-                        <input type="submit" value="Send" />
-                      </form>
+                      <div id="form">
+                        <form>
+                          <div class="img">
+                            <img src="./media/talkwithmetrans.png" alt="" />
+                          </div>
+                          <div class="talk">
+                            <div class="con-github con-logo">
+                              <img src="./media/contactgithub.png" alt="" />
+                            </div>
+                            <div class="con-whatsapp con-logo">
+                              <img src="./media/whatsapp.png" alt="" />
+                            </div>
+                            <div class="con-phone con-logo">
+                              <img src="./media/phonering.png" alt="" />
+                            </div>
+                            <div class="con-mail con-logo">
+                              <img src="./media/mail2.png" alt="" />
+                            </div>
+                            <div class="con-linked con-logo">
+                              <img src="./media/linkedcontact.png" alt="" />
+                            </div>
+                          </div>
+                          <label for="name">Name:</label>
+                          <input type="text" name="name" placeholder="Your Name" id="name" required />
+                          <label for="email">Email:</label>
+                          <input
+                            type="email"
+                            name="email"
+                            id="email"
+                            placeholder="Your Email"
+                            required
+                          />
+                          <label for="message">Message:</label>
+                          <textarea
+                            id="message"
+                            name="message"
+                            cols="30"
+                            rows="10"
+                            required
+                          ></textarea>
+                          <input id="submit" type="submit" value="Send" />
+                        </form>
+                      </div>
+                      <div id="ynmap"><div id="map"></div></div>
                     </div>
                   </div>
                 </div>
@@ -262,7 +297,20 @@
         </div>
       </div>
     </div>
-
+    <script
+      src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+      integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+      crossorigin=""
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("andSDeVuCzaeGIAQ-");
+      })();
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script type="module" src="./index.js"></script>
   </body>

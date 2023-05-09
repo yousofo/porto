@@ -22,9 +22,10 @@ $mainBG1: rgb(31, 16, 71);
 $bg1: #eaf5f0;
 $green1: rgb(111, 255, 183);
 $green2: #4caf50;
-$navlightbg: rgba(31, 31, 31, 0.507);
+$navlightbg: rgba(31, 31, 31, 0.884);
 $naviocn: rgb(34, 34, 34);
 $hexagon-size: 80px;
+$conrotate: 27deg;
 //
 @keyframes colorChange {
   0%,
@@ -229,14 +230,14 @@ $hexagon-size: 80px;
                         to right,
                         rgba(17, 17, 17, 0),
                         rgb(17, 17, 17, 0.8),
-                        rgba(17, 17, 17, 0),
+                        rgba(17, 17, 17, 0)
                       );
                       width: 100%;
                       height: 100%;
                       top: 0;
                       z-index: -1;
                       left: 0;
-                      animation: offerlayer 4s infinite ;
+                      animation: offerlayer 4s infinite;
                     }
                   }
                   z-index: 2;
@@ -249,7 +250,7 @@ $hexagon-size: 80px;
                     33% {
                       color: rgb(197, 199, 56);
                     }
-                    67%{
+                    67% {
                       color: rgb(61, 199, 56);
                     }
                   }
@@ -289,6 +290,167 @@ $hexagon-size: 80px;
                 .col5 {
                   right: -40px;
                 }
+              }
+            }
+          }
+        }
+        .contact {
+          width: 100%;
+          // max-width: 1500px;
+          margin: auto;
+          overflow: hidden;
+          height: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          color: white;
+          background-color: white;
+          .contact-con {
+            position: relative;
+            width: 100%;
+            padding: 30px;
+            height: 100%;
+            #form {
+              position: absolute;
+              right: 0%;
+              translate: 0 -50%;
+              top: 50%;
+              z-index: 2;
+              display: flex;
+              justify-content: center;
+              width: 100%;
+              // max-width: 700px;
+              pointer-events: none;
+              form {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                padding: 20px;
+                border-radius: 3px;
+                position: relative;
+                pointer-events: all;
+                background-color: rgba(255, 255, 255, 1);
+                // background-color: rgba(255, 255, 255, 0.74);
+                color: black;
+                input,
+                textarea {
+                  box-shadow: 2px 2px 3px 0px rgb(168, 168, 168) inset;
+                  padding: 5px;
+                  font-size: 1rem;
+                  border: none;
+                  background-color: rgb(238, 238, 238);
+                  resize: none;
+                  &:focus-within {
+                    outline: none;
+                  }
+                }
+                #submit {
+                  box-shadow: none;
+                }
+                .img {
+                  position: absolute;
+                  rotate: -5deg;
+                  left: 82%;
+                  width: 100%;
+                  max-width: 300px;
+                  top: -66%;
+                  cursor: pointer;
+                  img {
+                    max-width: 100%;
+                  }
+                }
+                .talk {
+                  flex: 1;
+                  z-index: -1;
+                  // background-color: rgb(255, 91, 168);
+                  pointer-events: none;
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                  position: absolute;
+                  width: 100%;
+                  left: 100%;
+                  top: 50%;
+                  translate: 0 -50%;
+                  height: 100%;
+                  .con-logo {
+                    width: 100%;
+                    display: flex;
+                    pointer-events: all;
+                    justify-content: end;
+                    padding: 10px;
+                    border-top-right-radius: 35px;
+                    border-bottom-right-radius: 35px;
+                    position: absolute;
+                    left: -60%;
+                    bottom: 35%;
+                    transform-origin: bottom left;
+                    transition: .5s;
+                    img {
+                      width: 50px;
+                      aspect-ratio: 1;
+                    }
+                  }
+                  .con-github {
+                    background-color: rgb(27, 31, 35);
+                    rotate: -$conrotate;
+                    &:hover{
+                      translate: 60% -130%;
+                    }
+                  }
+                  .con-whatsapp {
+                    background-color: rgb(27, 215, 65);
+                    rotate: (-$conrotate / 2);
+                    &:hover{
+                      translate: 60% -65%;
+                    }
+                  }
+                  .con-phone {
+                    background-color: #ff9001;
+                    rotate: 0;
+                    &:hover{
+                      translate: 60% 0;
+                    }
+                  }
+                  .con-mail {
+                    background-color: rgb(255, 204, 0);
+                    rotate: ($conrotate / 2);
+                    transform-origin: top left;&:hover{
+                      translate: 60% 65%;
+                    }
+                  }
+                  .con-linked {
+                    background-color: rgb(243, 219, 230);
+                    rotate: $conrotate;
+                    transform-origin: top left;&:hover{
+                      translate: 60% 130%;
+                    }
+                  }
+                }
+              }
+            }
+            #ynmap {
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              top: 0;
+              left: 0;
+              z-index: 1;
+              #map {
+                width: 100%;
+                height: 100%;
+                z-index: 2;
+              }
+              &::before {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                pointer-events: none;
+                z-index: 3;
+                background-color: rgba(0, 0, 0, 0.63);
               }
             }
           }
