@@ -5,19 +5,29 @@ const swiper1 = new Swiper(".swiper1", {
   loop: true,
   slidesPerView: 1,
   // noSwiping: true,
-  // centeredSlides: true,
+  // centeredSlides: true,.con-logo
   spaceBetween: 0,
   noSwiping: true,
   allowTouchMove: false,
 });
 swiper1.on("slideChange", () => {
+  document.querySelectorAll(".active")
+    ? document
+        .querySelectorAll(".active")
+        .forEach((e) => e.classList.remove("active"))
+    : "";
+  console.log(swiper1.activeIndex);
   swiper1.activeIndex === 1
     ? document.querySelectorAll(".cust").forEach((e) => {
         e.classList.add("active");
       })
-    : document.querySelectorAll(".cust").forEach((e) => {
-        e.classList.remove("active");
-      });
+    : swiper1.activeIndex === 2
+    ? [
+        ...document.querySelectorAll(".con-logo"),
+        document.querySelector(".contact .talk"),
+        document.querySelector("#form"),
+      ].forEach((e) => e.classList.add("active"))
+    : "";
 });
 
 homeBtn.addEventListener("click", () => {

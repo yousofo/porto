@@ -294,7 +294,10 @@ img {
   z-index: 2;
   display: flex;
   justify-content: center;
+  align-items: center;
+  padding-right: 30px;
   width: 100%;
+  height: 100%;
   pointer-events: none;
 }
 .port .port-con .main .main-con .contact .contact-con #form form {
@@ -303,34 +306,54 @@ img {
   gap: 10px;
   padding: 20px;
   border-radius: 3px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
   position: relative;
   pointer-events: all;
   background-color: rgb(255, 255, 255);
+  left: -400px;
+  transition: 0.8s;
   color: black;
 }
 .port .port-con .main .main-con .contact .contact-con #form form input,
 .port .port-con .main .main-con .contact .contact-con #form form textarea {
-  box-shadow: 2px 2px 3px 0px rgb(168, 168, 168) inset;
-  padding: 5px;
+  padding: 10px 14px;
   font-size: 1rem;
-  border: none;
-  background-color: rgb(238, 238, 238);
+  border-radius: 4px;
+  border: 1px solid rgb(190, 190, 190);
+  background-color: transparent;
   resize: none;
+  caret-color: rgb(0, 255, 0);
 }
 .port .port-con .main .main-con .contact .contact-con #form form input:focus-within,
 .port .port-con .main .main-con .contact .contact-con #form form textarea:focus-within {
   outline: none;
 }
+.port .port-con .main .main-con .contact .contact-con #form form label {
+  color: #2196f3;
+  font-weight: 600;
+}
 .port .port-con .main .main-con .contact .contact-con #form form #submit {
-  box-shadow: none;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 1px;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  margin: auto;
+  padding: 10px;
+  background-color: #2196f3;
 }
 .port .port-con .main .main-con .contact .contact-con #form form .img {
   position: absolute;
-  rotate: -5deg;
-  left: 82%;
+  transition: 1s;
+  rotate: -135deg;
+  transform-origin: bottom left;
+  scale: 0;
+  left: 60%;
   width: 100%;
-  max-width: 300px;
-  top: -66%;
+  max-width: 200px;
+  top: -35%;
   cursor: pointer;
 }
 .port .port-con .main .main-con .contact .contact-con #form form .img img {
@@ -345,10 +368,14 @@ img {
   justify-content: center;
   position: absolute;
   width: 100%;
-  left: 100%;
+  left: 0%;
+  transition: 1s;
   top: 50%;
   translate: 0 -50%;
   height: 100%;
+}
+.port .port-con .main .main-con .contact .contact-con #form form .talk.active {
+  left: 32%;
 }
 .port .port-con .main .main-con .contact .contact-con #form form .talk .con-logo {
   width: 100%;
@@ -356,54 +383,157 @@ img {
   pointer-events: all;
   justify-content: end;
   padding: 10px;
+  align-items: center;
   border-top-right-radius: 35px;
   border-bottom-right-radius: 35px;
   position: absolute;
-  left: -60%;
+  left: 0;
   bottom: 35%;
   transform-origin: bottom left;
-  transition: 0.5s;
+  transition: 1s 0.3s;
 }
 .port .port-con .main .main-con .contact .contact-con #form form .talk .con-logo img {
   width: 50px;
   aspect-ratio: 1;
+  margin-left: 15px;
+}
+.port .port-con .main .main-con .contact .contact-con #form form .talk .con-logo p {
+  transition: 0.5s;
+  opacity: 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+.port .port-con .main .main-con .contact .contact-con #form form .talk .con-logo:hover p {
+  opacity: 1;
 }
 .port .port-con .main .main-con .contact .contact-con #form form .talk .con-github {
   background-color: rgb(27, 31, 35);
-  rotate: -27deg;
 }
-.port .port-con .main .main-con .contact .contact-con #form form .talk .con-github:hover {
-  translate: 60% -130%;
+.port .port-con .main .main-con .contact .contact-con #form form .talk .con-github.active {
+  rotate: -27deg;
 }
 .port .port-con .main .main-con .contact .contact-con #form form .talk .con-whatsapp {
   background-color: rgb(27, 215, 65);
-  rotate: -13.5deg;
 }
-.port .port-con .main .main-con .contact .contact-con #form form .talk .con-whatsapp:hover {
-  translate: 60% -65%;
+.port .port-con .main .main-con .contact .contact-con #form form .talk .con-whatsapp.active {
+  rotate: -13.5deg;
 }
 .port .port-con .main .main-con .contact .contact-con #form form .talk .con-phone {
   background-color: #ff9001;
+}
+.port .port-con .main .main-con .contact .contact-con #form form .talk .con-phone.active {
   rotate: 0;
 }
 .port .port-con .main .main-con .contact .contact-con #form form .talk .con-phone:hover {
-  translate: 60% 0;
+  transition: 0.5s ease-out;
+  translate: 35% 0;
 }
 .port .port-con .main .main-con .contact .contact-con #form form .talk .con-mail {
   background-color: rgb(255, 204, 0);
-  rotate: 13.5deg;
   transform-origin: top left;
 }
+.port .port-con .main .main-con .contact .contact-con #form form .talk .con-mail.active {
+  rotate: 13.5deg;
+}
 .port .port-con .main .main-con .contact .contact-con #form form .talk .con-mail:hover {
-  translate: 60% 65%;
+  transition: 0.5s ease-out;
+  translate: 50% 55%;
 }
 .port .port-con .main .main-con .contact .contact-con #form form .talk .con-linked {
   background-color: rgb(243, 219, 230);
-  rotate: 27deg;
   transform-origin: top left;
 }
-.port .port-con .main .main-con .contact .contact-con #form form .talk .con-linked:hover {
-  translate: 60% 130%;
+.port .port-con .main .main-con .contact .contact-con #form form .talk .con-linked.active {
+  rotate: 27deg;
+}
+.port .port-con .main .main-con .contact .contact-con #form .hello {
+  height: 520px;
+  padding: 2px;
+  width: 300px;
+  position: relative;
+  z-index: 99;
+  border-radius: 17px;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+  background: linear-gradient(rgb(0, 243, 130), rgb(0, 181, 96));
+}
+.port .port-con .main .main-con .contact .contact-con #form .hello .hello-in {
+  position: relative;
+  border-radius: 17px;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+  pointer-events: all;
+  padding: 20px;
+  color: rgb(255, 255, 255);
+  height: 100%;
+  width: 100%;
+  padding-top: 25px;
+}
+.port .port-con .main .main-con .contact .contact-con #form .hello .hello-in .exit {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  translate: -35% -35%;
+  background: linear-gradient(315deg, rgb(0, 243, 130), rgb(0, 181, 96));
+  z-index: 1;
+}
+.port .port-con .main .main-con .contact .contact-con #form .hello .hello-in .exit::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  content: "";
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+  width: 92%;
+  height: 92%;
+  z-index: -1;
+}
+.port .port-con .main .main-con .contact .contact-con #form .hello .hello-in .exit i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: 2;
+  font-size: 2rem;
+  color: black;
+}
+.port .port-con .main .main-con .contact .contact-con #form .hello .hello-in .hello-con {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow: hidden;
+  position: relative;
+}
+.port .port-con .main .main-con .contact .contact-con #form .hello .hello-in .hello-con h1 {
+  font-size: 2.5rem;
+  position: relative;
+  line-height: 1.5;
+  transition: 1s;
+  left: 100%;
+}
+.port .port-con .main .main-con .contact .contact-con #form .hello .hello-in .hello-con p {
+  font-size: 1.1rem;
+  position: relative;
+  transition: 1s;
+  left: -100%;
+  line-height: 1.3;
+  font-weight: bold;
+}
+.port .port-con .main .main-con .contact .contact-con #form.active form {
+  left: 0;
+}
+.port .port-con .main .main-con .contact .contact-con #form.active form > .img {
+  scale: 1;
+  rotate: -5deg;
+}
+.port .port-con .main .main-con .contact .contact-con #form.active .hello h1,
+.port .port-con .main .main-con .contact .contact-con #form.active .hello p {
+  left: 0 !important;
 }
 .port .port-con .main .main-con .contact .contact-con #ynmap {
   position: absolute;
