@@ -381,24 +381,35 @@ img {
   pointer-events: none;
 }
 .port .port-con .main .main-con .contact .contact-con #form form {
+  width: 100%;
   max-width: 320px;
   display: flex;
   flex-direction: column;
   gap: 10px;
   padding: 20px;
   border-radius: 3px;
-  position: absolute;
+  position: relative;
   pointer-events: all;
   background-color: rgb(255, 255, 255);
   left: -400px;
   transition: 0.8s;
   color: black;
 }
+@media (max-width: 355px) {
+  .port .port-con .main .main-con .contact .contact-con #form form {
+    max-width: 100%;
+  }
+}
 @media (min-width: 768px) {
   .port .port-con .main .main-con .contact .contact-con #form form {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
-    position: relative;
+  }
+}
+@media (max-width: 767px) {
+  .port .port-con .main .main-con .contact .contact-con #form form {
+    position: absolute;
+    transition: 0s;
   }
 }
 .port .port-con .main .main-con .contact .contact-con #form form h1 {
@@ -477,19 +488,19 @@ img {
   left: 250%;
 }
 .port .port-con .main .main-con .contact .contact-con #form form .ss-links .ss-links-con .ss-link:nth-child(1) {
-  transition: 1s ease-out;
+  transition: 0.8s ease-out;
 }
 .port .port-con .main .main-con .contact .contact-con #form form .ss-links .ss-links-con .ss-link:nth-child(2) {
-  transition: 1.2s ease-out;
+  transition: 1s ease-out;
 }
 .port .port-con .main .main-con .contact .contact-con #form form .ss-links .ss-links-con .ss-link:nth-child(3) {
-  transition: 1.4s ease-out;
+  transition: 1.2s ease-out;
 }
 .port .port-con .main .main-con .contact .contact-con #form form .ss-links .ss-links-con .ss-link:nth-child(4) {
-  transition: 1.6s ease-out;
+  transition: 1.4s ease-out;
 }
 .port .port-con .main .main-con .contact .contact-con #form form .ss-links .ss-links-con .ss-link:nth-child(5) {
-  transition: 1.8s ease-out;
+  transition: 1.6s ease-out;
 }
 .port .port-con .main .main-con .contact .contact-con #form form .ss-links .ss-links-con img {
   width: 100%;
