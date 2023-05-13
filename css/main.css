@@ -133,7 +133,7 @@ img {
   }
 }
 .port .port-con .nav .nav-con .links li span {
-  font-size: 0.8rem;
+  font-size: 1.1rem;
 }
 .port .port-con .nav .nav-con .links li:hover {
   border: 1px solid rgb(255, 255, 255);
@@ -269,7 +269,7 @@ img {
   position: relative;
 }
 .port .port-con .main .main-con .about .about-con .text2 .text2-con .offers p {
-  font-size: 1.2rem;
+  font-size: 1.35rem;
   position: relative;
   z-index: 1;
 }
