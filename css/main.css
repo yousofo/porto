@@ -429,9 +429,21 @@ img {
 .port .port-con .main .main-con .contact .contact-con #form form textarea:focus-within {
   outline: none;
 }
+@media (max-width: 767px) {
+  .port .port-con .main .main-con .contact .contact-con #form form input,
+  .port .port-con .main .main-con .contact .contact-con #form form textarea {
+    font-size: 1.2rem;
+  }
+}
 .port .port-con .main .main-con .contact .contact-con #form form label {
   color: #2196f3;
+  font-size: 1.1rem;
   font-weight: 600;
+}
+@media (max-width: 767px) {
+  .port .port-con .main .main-con .contact .contact-con #form form label {
+    font-size: 1.35rem;
+  }
 }
 .port .port-con .main .main-con .contact .contact-con #form form #submit {
   color: white;

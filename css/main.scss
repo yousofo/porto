@@ -417,9 +417,16 @@ $elzero: #2196f3;
                   &:focus-within {
                     outline: none;
                   }
+                  @media (max-width:767px) {
+                    font-size: 1.2rem;
+                  }
                 }
                 label {
                   color: $elzero;
+                  font-size: 1.1rem;
+                  @media (max-width:767px) {
+                    font-size: 1.35rem;
+                  }
                   font-weight: 600;
                 }
                 #submit {
