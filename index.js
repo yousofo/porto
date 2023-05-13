@@ -1,6 +1,9 @@
 const aboutBtn = document.querySelector("#aboutBtn");
 const homeBtn = document.querySelector("#homeBtn");
 const contactBtn = document.querySelector("#contactBtn");
+const workBtn = document.querySelector("#workBtn");
+const slides = document.querySelectorAll(".slide-fade");
+
 const swiper1 = new Swiper(".swiper1", {
   loop: true,
   slidesPerView: 1,
@@ -10,26 +13,63 @@ const swiper1 = new Swiper(".swiper1", {
   noSwiping: true,
   allowTouchMove: false,
 });
+const swiper2 = new Swiper(".swiper2", {
+  loop: true,
+  slidesPerView: 2,
+  // noSwiping: true,
+  // centeredSlides: true,.con-logo
+  spaceBetween: "10px",
+  noSwiping: false,
+  allowTouchMove: true,
+  navigation: {
+    nextEl: ".swiper2 .swiper-button-next",
+    prevEl: ".swiper2 .swiper-button-prev",
+  },
+  breakpoints: {
+    // when window width is >= 480px
+    480: {
+      slidesPerView: 3,
+    },
+    // when window width is >= 640px
+    640: {
+      slidesPerView: 4,
+    },
+    800: {
+      slidesPerView: 5,
+    },
+    1100: {
+      slidesPerView: 6,
+    },
+    1400: {
+      slidesPerView: 7,
+    },
+  },
+});
 swiper1.on("slideChange", () => {
   document.querySelectorAll(".active")
     ? document
         .querySelectorAll(".active")
         .forEach((e) => e.classList.remove("active"))
     : "";
-  console.log(swiper1.activeIndex);
-  swiper1.activeIndex === 1
-    ? document.querySelectorAll(".cust").forEach((e) => {
-        e.classList.add("active");
-      })
-    : swiper1.activeIndex === 2
-    ? [
+
+  slides.forEach((e) => e.classList.remove("fade-true"));
+  slides[swiper1.activeIndex].classList.add("fade-true")
+  
+  switch (swiper1.activeIndex) {
+    case 1:
+      document
+        .querySelectorAll(".cust")
+        .forEach((e) => e.classList.add("active"));
+      break;
+    case 2:
+      [
         ...document.querySelectorAll(".con-logo"),
         document.querySelector(".contact .talk"),
         document.querySelector("#form"),
-      ].forEach((e) => e.classList.add("active"))
-    : "";
+      ].forEach((e) => e.classList.add("active"));
+      break;
+  }
 });
-
 homeBtn.addEventListener("click", () => {
   swiper1.slideTo(0);
 });
@@ -38,6 +78,9 @@ aboutBtn.addEventListener("click", () => {
 });
 contactBtn.addEventListener("click", () => {
   swiper1.slideTo(2);
+});
+workBtn.addEventListener("click", () => {
+  swiper1.slideTo(3);
 });
 
 const inName = document.getElementById("name");
