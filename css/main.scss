@@ -78,6 +78,23 @@ $elzero: #2196f3;
         gap: 5px;
         width: max-content;
         border-radius: 8px;
+        span {
+          @media (max-width: 350px) {
+            font-size: 0.94rem;
+          }
+          @media (min-width: 351px) {
+            font-size: 1.05rem;
+          }
+          @media (min-width: 401px) {
+            font-size: 1.3rem;
+          }
+          @media (min-width: 451px) {
+            font-size: 1.5rem;
+          }
+          @media (min-width: 501px) {
+            font-size: 1rem;
+          }
+        }
         * {
           color: rgb(182, 182, 182);
           transition: 0.3s;
@@ -130,9 +147,6 @@ $elzero: #2196f3;
               padding: 6px;
             }
             cursor: pointer;
-            span {
-              font-size: 1.1rem;
-            }
             &:hover {
               border: 1px solid rgb(255, 255, 255);
               span {
@@ -145,7 +159,7 @@ $elzero: #2196f3;
           display: flex;
           align-items: center;
           justify-content: center;
-          padding: 13px;
+          padding: 15px 10px;
           background-color: rgb(255, 74, 19);
           border-radius: 8px;
           gap: 4px;
@@ -373,8 +387,9 @@ $elzero: #2196f3;
                 @media (min-width: 768px) {
                   border-top-left-radius: 0;
                   border-bottom-left-radius: 0;
+                  position: relative;
                 }
-                position: relative;
+                position: absolute;
                 pointer-events: all;
                 background-color: rgb(255, 255, 255);
                 left: -400px;
@@ -652,6 +667,11 @@ $elzero: #2196f3;
               &.active {
                 form {
                   left: 0;
+                  @media (max-width: 767px) {
+                    left: 50%;
+                    top: 50%;
+                    translate: -50% -50%;
+                  }
                   > .img {
                     scale: 1;
                     rotate: -5deg;

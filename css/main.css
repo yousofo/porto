@@ -71,6 +71,31 @@ img {
   width: max-content;
   border-radius: 8px;
 }
+@media (max-width: 350px) {
+  .port .port-con .nav .nav-con span {
+    font-size: 0.94rem;
+  }
+}
+@media (min-width: 351px) {
+  .port .port-con .nav .nav-con span {
+    font-size: 1.05rem;
+  }
+}
+@media (min-width: 401px) {
+  .port .port-con .nav .nav-con span {
+    font-size: 1.3rem;
+  }
+}
+@media (min-width: 451px) {
+  .port .port-con .nav .nav-con span {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 501px) {
+  .port .port-con .nav .nav-con span {
+    font-size: 1rem;
+  }
+}
 .port .port-con .nav .nav-con * {
   color: rgb(182, 182, 182);
   transition: 0.3s;
@@ -132,9 +157,6 @@ img {
     padding: 6px;
   }
 }
-.port .port-con .nav .nav-con .links li span {
-  font-size: 1.1rem;
-}
 .port .port-con .nav .nav-con .links li:hover {
   border: 1px solid rgb(255, 255, 255);
 }
@@ -145,7 +167,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 13px;
+  padding: 15px 10px;
   background-color: rgb(255, 74, 19);
   border-radius: 8px;
   gap: 4px;
@@ -365,7 +387,7 @@ img {
   gap: 10px;
   padding: 20px;
   border-radius: 3px;
-  position: relative;
+  position: absolute;
   pointer-events: all;
   background-color: rgb(255, 255, 255);
   left: -400px;
@@ -376,6 +398,7 @@ img {
   .port .port-con .main .main-con .contact .contact-con #form form {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
+    position: relative;
   }
 }
 .port .port-con .main .main-con .contact .contact-con #form form h1 {
@@ -649,6 +672,13 @@ img {
 }
 .port .port-con .main .main-con .contact .contact-con #form.active form {
   left: 0;
+}
+@media (max-width: 767px) {
+  .port .port-con .main .main-con .contact .contact-con #form.active form {
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+  }
 }
 .port .port-con .main .main-con .contact .contact-con #form.active form > .img {
   scale: 1;
