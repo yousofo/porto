@@ -72,36 +72,17 @@ img {
   width: max-content;
   border-radius: 8px;
 }
-@media (max-width: 500px) {
-  .port .port-con .nav .nav-con {
-    width: 100%;
-    border-radius: 0px;
-  }
-  .port .port-con .nav .nav-con .links {
-    flex: 1;
-  }
-  .port .port-con .nav .nav-con .links li {
-    min-width: -moz-fit-content;
-    min-width: fit-content;
-    flex: 1;
-  }
-}
 @media (max-width: 350px) {
   .port .port-con .nav .nav-con span {
-    font-size: 0.85rem;
+    font-size: 1.05rem;
   }
 }
 @media (min-width: 351px) {
   .port .port-con .nav .nav-con span {
-    font-size: 0.98rem;
+    font-size: 1.22rem;
   }
 }
-@media (min-width: 401px) {
-  .port .port-con .nav .nav-con span {
-    font-size: 1.2rem;
-  }
-}
-@media (min-width: 451px) {
+@media (min-width: 400px) {
   .port .port-con .nav .nav-con span {
     font-size: 1.385rem;
   }
@@ -233,14 +214,14 @@ img {
 }
 .port .port-con .main .main-con .name .name-con {
   color: white;
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   letter-spacing: 5px;
 }
 .port .port-con .main .main-con .name .text-con {
   margin-top: 30px;
   color: white;
   max-width: 650px;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
 }
 .port .port-con .main .main-con .name .text-con p {
   line-height: 1.5;
@@ -270,13 +251,11 @@ img {
 }
 .port .port-con .main .main-con .about .about-con p {
   line-height: 1.25;
+  font-size: 1.7rem;
 }
 .port .port-con .main .main-con .about .about-con .text {
   display: flex;
   flex-direction: column;
-}
-.port .port-con .main .main-con .about .about-con .text p {
-  font-size: 1.6rem;
 }
 @media (max-width: 767px) {
   .port .port-con .main .main-con .about .about-con .text p:nth-child(2) {
@@ -298,15 +277,12 @@ img {
   overflow: hidden;
   gap: 1rem;
 }
-.port .port-con .main .main-con .about .about-con .text2 .text2-con p {
-  font-size: 1.6rem;
-}
 .port .port-con .main .main-con .about .about-con .text2 .text2-con .offers {
   z-index: 2;
   position: relative;
 }
 .port .port-con .main .main-con .about .about-con .text2 .text2-con .offers p {
-  font-size: 1.35rem;
+  font-size: 1.4rem;
   position: relative;
   z-index: 1;
 }
@@ -384,9 +360,9 @@ img {
 }
 .port .port-con .main .main-con .contact .contact-con #form {
   position: absolute;
-  right: 0%;
-  translate: 0 -50%;
+  left: 50%;
   top: 50%;
+  translate: -50% -50%;
   z-index: 2;
   display: flex;
   justify-content: center;
@@ -416,10 +392,11 @@ img {
     border-bottom-left-radius: 0;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 400px) {
   .port .port-con .main .main-con .contact .contact-con #form form {
-    position: absolute;
     max-width: 400px;
+    width: calc(100% - 40px);
+    margin: auto;
     transition: 0s;
   }
 }
@@ -706,13 +683,6 @@ img {
 }
 .port .port-con .main .main-con .contact .contact-con #form.active form {
   left: 0;
-}
-@media (max-width: 767px) {
-  .port .port-con .main .main-con .contact .contact-con #form.active form {
-    left: 50%;
-    top: 50%;
-    translate: -50% -50%;
-  }
 }
 .port .port-con .main .main-con .contact .contact-con #form.active form > .img {
   scale: 1;
