@@ -70,9 +70,6 @@ $elzero: #2196f3;
       bottom: 1rem;
       left: 0;
       z-index: 99999999;
-      @media (max-width:500px) {
-        bottom: .5rem;
-      }
       .nav-con {
         background-color: $navlightbg;
         display: flex;

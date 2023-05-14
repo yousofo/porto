@@ -61,11 +61,6 @@ img {
   left: 0;
   z-index: 99999999;
 }
-@media (max-width: 500px) {
-  .port .port-con .nav {
-    bottom: 0.5rem;
-  }
-}
 .port .port-con .nav .nav-con {
   background-color: rgba(31, 31, 31, 0.884);
   display: flex;
