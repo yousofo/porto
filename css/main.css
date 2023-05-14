@@ -57,7 +57,7 @@ img {
 .port .port-con .nav {
   width: 100vw;
   position: fixed;
-  bottom: 2.01rem;
+  bottom: 2rem;
   left: 0;
   z-index: 99999999;
 }
@@ -894,9 +894,11 @@ img {
 
 .cust {
   translate: -150vw 100vh;
+  -webkit-transform: translate(-150vw 100vh);
 }
 .cust.active {
   translate: 0;
+  -webkit-transform: translate(-150vw 100vh);
 }
 .cust.active.cust1 {
   transition: 0.5s 0.05s ease-out;

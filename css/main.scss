@@ -917,8 +917,10 @@ $elzero: #2196f3;
 }
 .cust {
   translate: -150vw 100vh;
+  -webkit-transform: translate(-150vw 100vh);
   &.active {
     translate: 0;
+    -webkit-transform: translate(-150vw 100vh);
     &.cust1 {
       transition: 0.5s 0.05s ease-out;
     }
