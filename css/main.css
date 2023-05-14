@@ -57,7 +57,7 @@ img {
 .port .port-con .nav {
   width: 100vw;
   position: fixed;
-  bottom: 2rem;
+  bottom: 2.01rem;
   left: 0;
   z-index: 99999999;
 }
