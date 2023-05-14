@@ -10,7 +10,7 @@
 
 @media (max-width: 500px) {
   :root {
-    font-size: 10px;
+    font-size: 11px;
   }
 }
 @media (min-width: 501px) {
@@ -61,9 +61,15 @@ img {
   left: 0;
   z-index: 99999999;
 }
+@media (max-width: 500px) {
+  .port .port-con .nav {
+    bottom: 0.5rem;
+  }
+}
 .port .port-con .nav .nav-con {
   background-color: rgba(31, 31, 31, 0.884);
   display: flex;
+  justify-content: center;
   padding: 6px;
   margin: auto;
   gap: 5px;
@@ -71,24 +77,38 @@ img {
   width: max-content;
   border-radius: 8px;
 }
+@media (max-width: 500px) {
+  .port .port-con .nav .nav-con {
+    width: 100%;
+    border-radius: 0px;
+  }
+  .port .port-con .nav .nav-con .links {
+    flex: 1;
+  }
+  .port .port-con .nav .nav-con .links li {
+    min-width: -moz-fit-content;
+    min-width: fit-content;
+    flex: 1;
+  }
+}
 @media (max-width: 350px) {
   .port .port-con .nav .nav-con span {
-    font-size: 0.94rem;
+    font-size: 0.85rem;
   }
 }
 @media (min-width: 351px) {
   .port .port-con .nav .nav-con span {
-    font-size: 1.05rem;
+    font-size: 0.98rem;
   }
 }
 @media (min-width: 401px) {
   .port .port-con .nav .nav-con span {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 }
 @media (min-width: 451px) {
   .port .port-con .nav .nav-con span {
-    font-size: 1.5rem;
+    font-size: 1.385rem;
   }
 }
 @media (min-width: 501px) {
@@ -131,7 +151,6 @@ img {
 .port .port-con .nav .nav-con .links {
   display: flex;
   gap: 4px;
-  display: flex;
   border-radius: 8px;
   align-items: center;
   background-color: rgb(53, 53, 53);
@@ -154,13 +173,13 @@ img {
 }
 @media (max-width: 767px) {
   .port .port-con .nav .nav-con .links li {
-    padding: 6px;
+    padding: 0.55rem;
   }
 }
-.port .port-con .nav .nav-con .links li:hover {
+.port .port-con .nav .nav-con .links li:hover, .port .port-con .nav .nav-con .links li.active {
   border: 1px solid rgb(255, 255, 255);
 }
-.port .port-con .nav .nav-con .links li:hover span {
+.port .port-con .nav .nav-con .links li:hover span, .port .port-con .nav .nav-con .links li.active span {
   color: rgb(225, 252, 255);
 }
 .port .port-con .nav .nav-con > .recent {
@@ -173,6 +192,7 @@ img {
   gap: 4px;
 }
 .port .port-con .nav .nav-con > .recent span {
+  font-weight: bold;
   color: black;
 }
 .port .port-con .main {
@@ -395,11 +415,6 @@ img {
   transition: 0.8s;
   color: black;
 }
-@media (max-width: 355px) {
-  .port .port-con .main .main-con .contact .contact-con #form form {
-    max-width: 100%;
-  }
-}
 @media (min-width: 768px) {
   .port .port-con .main .main-con .contact .contact-con #form form {
     border-top-left-radius: 0;
@@ -409,6 +424,7 @@ img {
 @media (max-width: 767px) {
   .port .port-con .main .main-con .contact .contact-con #form form {
     position: absolute;
+    max-width: 400px;
     transition: 0s;
   }
 }
@@ -466,7 +482,7 @@ img {
   width: 40%;
   max-width: 200px;
   top: 0;
-  translate: 10% -75%;
+  translate: 7% -75%;
   cursor: pointer;
 }
 .port .port-con .main .main-con .contact .contact-con #form form .img img {
@@ -742,7 +758,7 @@ img {
   left: 0;
   pointer-events: none;
   z-index: 3;
-  background-color: rgba(0, 0, 0, 0.63);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 .port .port-con .main .main-con .work {
   width: 100%;

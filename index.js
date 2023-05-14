@@ -53,8 +53,8 @@ swiper1.on("slideChange", () => {
     : "";
 
   slides.forEach((e) => e.classList.remove("fade-true"));
-  slides[swiper1.activeIndex].classList.add("fade-true")
-  
+  slides[swiper1.activeIndex].classList.add("fade-true");
+
   switch (swiper1.activeIndex) {
     case 1:
       document
@@ -72,15 +72,19 @@ swiper1.on("slideChange", () => {
 });
 homeBtn.addEventListener("click", () => {
   swiper1.slideTo(0);
+  document.querySelector("#homtBtn").classList.add("active");
 });
 aboutBtn.addEventListener("click", () => {
   swiper1.slideTo(1);
+  document.querySelector("#aboutBtn").classList.add("active");
 });
 contactBtn.addEventListener("click", () => {
   swiper1.slideTo(2);
+  document.querySelector("#contactBtn").classList.add("active");
 });
 workBtn.addEventListener("click", () => {
   swiper1.slideTo(3);
+  document.querySelector("#workBtn").classList.add("active");
 });
 
 const inName = document.getElementById("name");
