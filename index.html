@@ -1,501 +1,297 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/main.css" />
-    <link rel="stylesheet" href="./css/all.min.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
-      integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
-      crossorigin=""
-    />
-  </head>
 
-  <body>
-    <div class="port">
-      <div class="port-con">
-        <div class="main">
-          <div class="main-con">
-            <div class="color"></div>
-            <div class="swiper swiper1">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="name slide-fade fade-true">
-                    <div class="name-con">
-                      <h1>Hello !</h1>
-                      <h1>I'm Yousef.</h1>
-                      <p>I love women.</p>
-                    </div>
-                    <div class="text-con">
-                      <p>
-                        I'm a Front-end developer with years of experience in
-                        building products and appealing web experiences.
-                      </p>
-                    </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/all.min.css" />
+  <link rel="stylesheet" href="./css/output.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="./node_modules/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+    integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+</head>
+
+<body>
+  <div class="port">
+    <div class="port-con relative">
+      <!--start main -->
+      <div class="main">
+        <div class="main-con flex h-fit min-h-screen relative flex-col items-center">
+          <!-- top background color -->
+          <div class="color w-full h-2/5 absolute top-0 left-0"></div>
+          <!-- start main slides -->
+          <div class="swiper swiper1">
+            <div class="swiper-wrapper flex">
+              <!-- intro slide -->
+              <div class="swiper-slide">
+                <div class="intro slide-fade fade-true w-full m-auto h-full p-7 relative flex flex-col items-center md:justify-between md:flex-row justify-center">
+                  <div class="name overflow-hidden text-white tracking-wide">
+                    <h2 class="font-bold text-5xl">Hello! <span class="text-4xl">I'm Yousef.</span></h2>
+                    <p class="offers text text-white mt-1 text-2xl">
+                      I'm a <span>web developer</span> and I love building <span>web apps</span>!
+                    </p>
                   </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="about slide-fade">
-                    <div class="about-con">
-                      <div class="text">
-                        <p>I'm a Front-End Developer, I Love & Enjoy Coding!</p>
-                        <p>
-                          I Have a Year of Experience in Building UIs,
-                          Animations and Dynamic User Experiences.
-                        </p>
+                  <div class="skills  flex relative justify-end mt-7">
+                    <div class="col col4">
+                      <div class="cust cust10">
+                        <div class="hexagon hex10">
+                          <span class="overlay"><span>learning</span></span>
+                          <img src="./media/unnamed-removebg-preview.png" alt="" />
+                        </div>
+                        <span class="hex-name">GitHub</span>
                       </div>
-                      <div class="text2">
-                        <div class="text2-con">
-                          <div class="text-1">
-                            <p>
-                              For Me, Each is an Opportunity to Learn New
-                              Concepts.
-                            </p>
-                          </div>
-                          <div class="text-2">
-                            <div class="title"><p>What i offer ?</p></div>
-                            <div class="offers">
-                              <p>
-                                From Simple Pages to <span>Complex UIs</span>,
-                                <span>Web Applications</span>,
-                                <span>Optimizing</span>
-                                <span>User Experience</span> and Creative
-                                Implementations.
-                              </p>
-                            </div>
-                          </div>
+                      <div class="cust cust11">
+                        <div class="hexagon hex11">
+                          <span class="overlay"><span>learning</span></span>
+                          <img src="./media/booststrap.png" alt="" />
                         </div>
-                        <div class="skills">
-                          <div class="col col5">
-                            <div class="cust cust12">
-                              <div class="hexagon hex12">
-                                <span class="overlay"
-                                  ><span>learning</span></span
-                                >
-                                <span class="hex-name">Tailwind</span>
-                                <img
-                                  src="./media/Tailwind_CSS_Logo.svg.png"
-                                  alt=""
-                                />
-                              </div>
-                            </div>
-                            <div class="cust cust13">
-                              <div class="hexagon hex13">
-                                <span class="overlay"
-                                  ><span>learning</span></span
-                                >
-                                <span class="hex-name">TypeScript</span>
-                                <img
-                                  src="./media/Typescript_logo_2020.svg.png"
-                                  alt=""
-                                />
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col col4">
-                            <div class="cust cust10">
-                              <div class="hexagon hex10">
-                                <span class="overlay"
-                                  ><span>learning</span></span
-                                ><span class="hex-name">GitHub</span>
-                                <img
-                                  src="./media/unnamed-removebg-preview.png"
-                                  alt=""
-                                />
-                              </div>
-                            </div>
-                            <div class="cust cust11">
-                              <div class="hexagon hex11">
-                                <span class="overlay"
-                                  ><span>learning</span></span
-                                ><span class="hex-name">boostStrap</span>
-                                <img src="./media/booststrap.png" alt="" />
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col col3">
-                            <div class="cust cust7">
-                              <div class="hexagon learning hex7">
-                                <span class="overlay"
-                                  ><span>learning</span></span
-                                ><span class="hex-name">Express js</span>
-                                <img src="./media/express-js.png" alt="" />
-                              </div>
-                            </div>
-                            <div class="cust cust8">
-                              <div class="hexagon learning hex8">
-                                <span class="overlay"
-                                  ><span>learning</span></span
-                                ><span class="hex-name">Node js</span>
-                                <img src="./media/nodejs-1-logo.png" alt="" />
-                              </div>
-                            </div>
-                            <div class="cust cust9">
-                              <div class="hexagon learning hex9">
-                                <span class="overlay"
-                                  ><span>learning</span></span
-                                ><span class="hex-name">Mongo DB</span>
-                                <img
-                                  src="./media/kuzt9r42or1fxvlq2-Meta_Generic.png"
-                                  alt=""
-                                />
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col col2">
-                            <div class="cust cust4">
-                              <div class="hexagon hex4">
-                                <span class="overlay"
-                                  ><span>learning</span></span
-                                ><span class="hex-name">SASS</span>
-                                <img
-                                  src="./media/scsscut-removebg-preview.png"
-                                  alt=""
-                                />
-                              </div>
-                            </div>
-                            <div class="cust cust5">
-                              <div class="hexagon hex5">
-                                <span class="overlay"
-                                  ><span>learning</span></span
-                                ><span class="hex-name">C++</span>
-                                <img
-                                  src="./media/ISO_C++_Logo.svg.png"
-                                  alt=""
-                                />
-                              </div>
-                            </div>
-                            <div class="cust cust6">
-                              <div class="hexagon hex6">
-                                <span class="overlay"
-                                  ><span>learning</span></span
-                                ><span class="hex-name">React Redux</span>
-                                <img
-                                  src="./media/reduxpng-removebg-preview.png"
-                                  alt=""
-                                />
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col col1">
-                            <div class="cust cust1">
-                              <div class="hexagon hex1">
-                                <span class="overlay"
-                                  ><span>learning</span></span
-                                ><span class="hex-name">CSS</span>
-                                <img src="./media/cssedit1.png" alt="" />
-                              </div>
-                            </div>
-                            <div class="cust cust2">
-                              <div class="hexagon hex2">
-                                <span class="overlay"
-                                  ><span>learning</span></span
-                                ><span class="hex-name">HTML</span>
-                                <img src="./media/htmledit.png" alt="" />
-                              </div>
-                            </div>
-                            <div class="cust cust3">
-                              <div class="hexagon hex3">
-                                <span class="overlay"
-                                  ><span>learning</span></span
-                                >
-                                <span class="hex-name">React</span>
-                                <img src="./media/reactlogoedit1.png" alt="" />
-                              </div>
-                            </div>
-                          </div>
-                        </div>
+                        <span class="hex-name">boostStrap</span>
                       </div>
                     </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="contact slide-fade">
-                    <div class="contact-con">
-                      <div id="form">
-                        <div class="hello">
-                          <div class="hello-in">
-                            <div class="exit">
-                              <i class="fa-solid fa-xmark"></i>
-                            </div>
-                            <div class="hello-con">
-                              <h1>Hello !</h1>
-                              <p>I'd love to hear from you at any time!</p>
-                              <p>Always ready for new challenges and ideas.</p>
-                              <p>Have a question?</p>
-                              <p>
-                                Fill out this form and I will get back to you
-                                ASAP
-                              </p>
-                            </div>
-                          </div>
+                    <div class="col col3">
+                      <div class="cust cust7">
+                        <div class="hexagon  hex7">
+                          <span class="overlay"><span>learning</span></span>
+                          <img src="./media/csharp.png" alt="" />
                         </div>
-                        <form>
-                          <div class="img">
-                            <img src="./media/talkwithmetransnew.png" alt="" />
-                          </div>
-                          <h1>Get In Touch</h1>
-                          <label for="name">Name:</label>
-                          <input
-                            type="text"
-                            name="name"
-                            placeholder="Your Name"
-                            id="name"
-                            required
-                          />
-                          <label for="email">Email:</label>
-                          <input
-                            type="email"
-                            name="email"
-                            id="email"
-                            placeholder="Your Email"
-                            required
-                          />
-                          <label for="message">Message:</label>
-                          <textarea
-                            id="message"
-                            name="message"
-                            cols="30"
-                            rows="10"
-                            placeholder="Boobs?"
-                            required
-                          ></textarea>
-                          <input id="submit" type="submit" value="Send" />
-                          <div class="ss-links">
-                            <p>You can also reach me via:</p>
-                            <div class="ss-links-con">
-                              <div class="ss-link ss-github">
-                                <a href="https://github.com/yousef7722"
-                                  ><img src="./media/githubss.png" alt=""
-                                /></a>
-                              </div>
-                              <div class="ss-link ss-whatsapp">
-                                <a
-                                  href="https://api.whatsapp.com/send/?phone=201016686024&text&type=phone_number&app_absent=0"
-                                >
-                                  <img src="./media/whatsappss.png" alt="" />
-                                </a>
-                              </div>
-                              <div class="ss-link ss-linked">
-                                <a
-                                  href="https://www.linkedin.com/in/yousef-nabil-6716b0238/"
-                                  ><img src="./media/linkedin-icon-1-logo-black-and-white-removebg-preview.png" alt=""
-                                /></a>
-                              </div>
-                              <div class="ss-link ss-mail">
-                                <img src="./media/mail3-removebg-preview.png" alt="" />
-                              </div>
-                              <div class="ss-link ss-phone">
-                                <img src="./media/phonering.png" alt="" />
-                              </div>
-                            </div>
-                          </div>
-                          <div class="talk">
-                            <div class="con-github con-logo">
-                              <a href="https://github.com/yousef7722"
-                                ><img src="./media/contactgithub.png" alt=""
-                              /></a>
-                            </div>
-                            <div class="con-whatsapp con-logo">
-                              <a
-                                href="https://api.whatsapp.com/send/?phone=201016686024&text&type=phone_number&app_absent=0"
-                              >
-                                <img src="./media/whatsapp.png" alt="" />
-                              </a>
-                            </div>
-                            <div class="con-phone con-logo">
-                              <p>+20 101 668 6024</p>
-                              <img src="./media/phonering.png" alt="" />
-                            </div>
-                            <div class="con-mail con-logo">
-                              <p>jon772002@gmail.com</p>
-                              <img src="./media/mail2.png" alt="" />
-                            </div>
-                            <div class="con-linked con-logo">
-                              <a
-                                href="https://www.linkedin.com/in/yousef-nabil-6716b0238/"
-                                ><img src="./media/linkedcontact.png" alt=""
-                              /></a>
-                            </div>
-                          </div>
-                        </form>
+                        <span class="hex-name">C#</span>
                       </div>
-                      <div id="ynmap"><div id="map"></div></div>
+
+                      <div class="cust cust8">
+                        <div class="hexagon hex8">
+                          <span class="overlay"><span>learning</span></span>
+                          <img src="./media/js_logo.png" alt="" />
+                        </div>
+                        <span class="hex-name">JavaScript</span>
+                      </div>
+                      <div class="cust cust9">
+                        <div class="hexagon hex9">
+                          <span class="overlay"><span>learning</span></span>
+                          <img src="./media/Typescript_logo_2020.svg.png" alt="" />
+                        </div>
+                        <span class="hex-name">TypeScript</span>
+                      </div>
                     </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="work slide-fade">
-                    <div class="work-con">
-                      <div class="sec">
-                        <div class="title">
-                          <div class="title-con">
-                            <h3>Recent projects</h3>
-                          </div>
+                    <div class="col col2">
+                      <div class="cust cust4">
+                        <div class="hexagon hex4">
+                          <span class="overlay"><span>learning</span></span>
+                          <img src="./media/scsscut-removebg-preview.png" alt="" />
                         </div>
-                        <div class="box">
-                          <div class="box-con">
-                            <div class="swiper swiper2">
-                              <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                  <div class="item">
-                                    <img src="./media/bg1.jpg" alt="" />
-                                  </div>
-                                </div>
-                                <div class="swiper-slide">
-                                  <div class="item">
-                                    <img src="./media/bg1.jpg" alt="" />
-                                  </div>
-                                </div>
-                                <div class="swiper-slide">
-                                  <div class="item">
-                                    <img src="./media/bg1.jpg" alt="" />
-                                  </div>
-                                </div>
-                                <div class="swiper-slide">
-                                  <div class="item">
-                                    <img src="./media/bg1.jpg" alt="" />
-                                  </div>
-                                </div>
-                                <div class="swiper-slide">
-                                  <div class="item">
-                                    <img src="./media/bg1.jpg" alt="" />
-                                  </div>
-                                </div>
-                                <div class="swiper-slide">
-                                  <div class="item">
-                                    <img src="./media/bg1.jpg" alt="" />
-                                  </div>
-                                </div>
-                                <div class="swiper-slide">
-                                  <div class="item">
-                                    <img src="./media/bg1.jpg" alt="" />
-                                  </div>
-                                </div>
-                                <div class="swiper-slide">
-                                  <div class="item">
-                                    <img src="./media/bg1.jpg" alt="" />
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="swiper-button-prev"></div>
-                              <div class="swiper-button-next"></div>
-                            </div>
-                          </div>
-                        </div>
+                        <span class="hex-name">SASS</span>
                       </div>
-                      <div class="sec">
-                        <div class="title">
-                          <div class="title-con">
-                            <h3>Recent projects</h3>
-                          </div>
+                      <div class="cust cust5">
+                        <div class="hexagon hex5">
+                          <span class="overlay">
+                            <span>learning</span>
+                          </span>
+                          <img src="./media/Tailwind_CSS_Logo.svg.png" alt="" />
                         </div>
-                        <div class="box">
-                          <div class="box-con">
-                            <div class="swiper swiper2">
-                              <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                  <div class="item">
-                                    <img src="./media/quizapp.png" alt="" />
-                                  </div>
-                                </div>
-                                <div class="swiper-slide">
-                                  <div class="item">
-                                    <img src="./media/memoryapp.png" alt="" />
-                                  </div>
-                                </div>
-                                <div class="swiper-slide">
-                                  <div class="item">
-                                    <img src="./media/typingapp.png" alt="" />
-                                  </div>
-                                </div>
-                                <div class="swiper-slide">
-                                  <div class="item">
-                                    <img src="./media/tasksapp.png" alt="" />
-                                  </div>
-                                </div>
-                                <div class="swiper-slide">
-                                  <div class="item">
-                                    <img src="./media/elzerotemp1.png" alt="" />
-                                  </div>
-                                </div>
-                                <div class="swiper-slide">
-                                  <div class="item">
-                                    <img src="./media/elzerotemp2.png" alt="" />
-                                  </div>
-                                </div>
-                                <div class="swiper-slide">
-                                  <div class="item">
-                                    <img src="./media/bg1.jpg" alt="" />
-                                  </div>
-                                </div>
-                                <div class="swiper-slide">
-                                  <div class="item">
-                                    <img src="./media/bg1.jpg" alt="" />
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="swiper-button-prev"></div>
-                              <div class="swiper-button-next"></div>
-                            </div>
-                          </div>
+                        <span class="hex-name">Tailwind</span>
+                      </div>
+                      <div class="cust cust6">
+                        <div class="hexagon hex6">
+                          <span class="overlay"><span>learning</span></span>
+                          <img src="./media/reduxpng-removebg-preview.png" alt="" />
                         </div>
+                        <span class="hex-name">React Redux</span>
+                      </div>
+                    </div>
+                    <div class="col col1">
+                      <div class="cust cust1">
+                        <div class="hexagon hex1">
+                          <span class="overlay"><span>learning</span></span>
+                          <img src="./media/cssedit1.png" alt="" />
+                        </div>
+                        <span class="hex-name">CSS</span>
+                      </div>
+                      <div class="cust cust2">
+                        <div class="hexagon hex2">
+                          <span class="overlay"><span>learning</span></span>
+                          <img src="./media/htmledit.png" alt="" />
+                        </div>
+                        <span class="hex-name">HTML</span>
+                      </div>
+                      <div class="cust cust3">
+                        <div class="hexagon hex3">
+                          <span class="overlay"><span>learning</span></span>
+
+                          <img src="./media/reactlogoedit1.png" alt="" />
+                        </div>
+                        <span class="hex-name">React</span>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
+              <!-- recent projects -->
+              <div class="swiper-slide work p-8">
+                <div class="work-con w-full h-screen slide-fade m-auto text-white">
+                    <nav class="flex justify-between font-semibold">
+                      <ul class="flex">
+                        <li id="wepappsbtn" class="p-5 js-activeBtn">Web app</li>
+                        <li id="landingpagesbtn" class="p-5 js-activeBtn">Landing pages</li>
+                      </ul>
+                      <ul class="flex">
+                        <li class="p-5">About</li>
+                        <li class="p-5">Contact</li>
+                      </ul>
+                    </nav>
+                    <section class="p-5 pt-4">
+                      <h2 class="text-2xl font-bold pl-0.5 pb-3 text-white">Landing Pages Samples</h2>
+                      <div class="work-items">
+                      </div>
+                    </section>
+                </div>
+              </div>
+              <!-- contact -->
+              <div class="swiper-slide">
+                <div
+                  class="contact slide-fade w-full m-auto overflow-hidden h-full flex justify-between text-white items-center bg-white">
+                  <div class="contact-con relative w-full p-7 h-full">
+                    <div id="form">
+                      <div class="hello">
+                        <div class="hello-in">
+                          <div class="exit">
+                            <i class="fa-solid fa-xmark"></i>
+                          </div>
+                          <div class="hello-con">
+                            <h2>Hello !</h2>
+                            <p>I'd love to hear from you at any time!</p>
+                            <p>Always ready for new challenges and ideas.</p>
+                            <p>Have a question?</p>
+                            <p>
+                              Fill out this form and I will get back to you
+                              ASAP
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <form>
+                        <div class="img">
+                          <img src="./media/talkwithmetransnew.png" alt="" />
+                        </div>
+                        <h2>Get In Touch</h2>
+                        <label for="name">Name:</label>
+                        <input type="text" name="name" placeholder="Your Name" id="name" required />
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" id="email" placeholder="Your Email" required />
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" cols="30" rows="10" placeholder="Boobs?"
+                          required></textarea>
+                        <input id="submit" type="submit" value="Send" />
+                        <div class="ss-links">
+                          <p>You can also reach me via:</p>
+                          <div class="ss-links-con">
+                            <div class="ss-link ss-github">
+                              <a href="https://github.com/yousef7722"><img src="./media/githubss.png" alt="" /></a>
+                            </div>
+                            <div class="ss-link ss-whatsapp">
+                              <a
+                                href="https://api.whatsapp.com/send/?phone=201016686024&text&type=phone_number&app_absent=0">
+                                <img src="./media/whatsappss.png" alt="" />
+                              </a>
+                            </div>
+                            <div class="ss-link ss-linked">
+                              <a href="https://www.linkedin.com/in/yousef-nabil-6716b0238/"><img
+                                  src="./media/linkedin-icon-1-logo-black-and-white-removebg-preview.png" alt="" /></a>
+                            </div>
+                            <div class="ss-link ss-mail">
+                              <img src="./media/mail3-removebg-preview.png" alt="" />
+                            </div>
+                            <div class="ss-link ss-phone">
+                              <img src="./media/phonering.png" alt="" />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="talk">
+                          <div class="con-github con-logo">
+                            <a href="https://github.com/yousef7722"><img src="./media/contactgithub.png" alt="" /></a>
+                          </div>
+                          <div class="con-whatsapp con-logo">
+                            <a
+                              href="https://api.whatsapp.com/send/?phone=201016686024&text&type=phone_number&app_absent=0">
+                              <img src="./media/whatsapp.png" alt="" />
+                            </a>
+                          </div>
+                          <div class="con-phone con-logo">
+                            <p>+20 101 668 6024</p>
+                            <img src="./media/phonering.png" alt="" />
+                          </div>
+                          <div class="con-mail con-logo">
+                            <p>jon772002@gmail.com</p>
+                            <img src="./media/mail2.png" alt="" />
+                          </div>
+                          <div class="con-linked con-logo">
+                            <a href="https://www.linkedin.com/in/yousef-nabil-6716b0238/"><img
+                                src="./media/linkedcontact.png" alt="" /></a>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                    <div id="ynmap">
+                      <div id="map"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide-fade"></div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="nav">
-          <div class="nav-con">
-            <div id="homeBtn" class="icon">
-              <i class="fa-solid fa-code"></i>
-            </div>
-            <ul class="links">
-              <li>
-                <span>Home</span>
-              </li>
-              <li id="contactBtn">
-                <span>Contact</span>
-              </li>
-              <li id="workBtn">
-                <span>Recent Work</span>
-              </li>
-            </ul>
-            <div id="aboutBtn" class="recent">
-              <span>About & Skills</span>
-            </div>
-          </div>
+          <!-- end main slides -->
         </div>
       </div>
+      <!--end main -->
+      <!-- start nav -->
+      <div class="nav w-screen fixed bottom-8 left-0">
+        <div class="nav-con relative flex justify-center p-1.5 m-auto gap-1.5 w-max rounded-md">
+          <div class="blobs">
+            <div class="blob"></div>
+            <div class="blob"></div>
+            <div class="blob"></div>
+            <div class="blob"></div>
+          </div>
+
+          <div id="aboutBtn" class="about js-activeBtn cursor-pointer flex items-center px-3 rounded-md gap-1">
+            <span class="font-bold text-black text-center">About</span>
+          </div>
+
+          <ul class="links flex text-ntext gap-1 rounded-lg items-center text-sm ml:text-base">
+            <li class="rounded-md border-nborder border p-2 cursor-pointer  hover:text-white hover:border-white js-activeBtn" id="workBtn">
+              Recent Works
+            </li>
+            <li class=" rounded-md border-nborder border p-2 cursor-pointer  hover:text-white hover:border-white" id="contactBtn">
+              Contact
+            </li>
+            <li class="rounded-md border-nborder border p-2 cursor-pointer  hover:text-white hover:border-white js-activeBtn" id="cvBtn">
+              CV
+             
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="contact-blob fixed bottom-8"></div>
+      <!-- end nav -->
     </div>
-    <script
-      src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
-      integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
-      crossorigin=""
-    ></script>
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
-    ></script>
-    <script type="text/javascript">
-      (function () {
-        emailjs.init("andSDeVuCzaeGIAQ-");
-      })();
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <script type="module" src="./index.js"></script>
-  </body>
+  </div>
+
+  <!-- scripts -->
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+    integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("andSDeVuCzaeGIAQ-");
+    })();
+  </script>
+  <script type="module" src="./js/jquery-3.7.1.min.js"></script>
+  <script type="module" src="./js/index.js"></script>
+</body>
+
 </html>
