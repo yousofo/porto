@@ -18,8 +18,8 @@ const swiper1 = new Swiper(".swiper1", {
 });
 window.onload = () => {
   $(".cust").each((i, e) => $(e).addClass("active"));
-  swiper1.slideTo(1);
-  contactBtn.addClass("active")
+  //swiper1.slideTo(1);
+  //contactBtn.addClass("active")
 }
 function removeActive(e) {
   $(".active").each((i, e) => e.classList.remove("active"))
