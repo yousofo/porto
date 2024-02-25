@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import "./swiper-bundle.min.css";
 .hi {
   color: wheat;
 }
@@ -14,20 +13,6 @@
   list-style: none;
   line-height: 1;
 }
-// :root {
-//   @media (max-width: 500px) {
-//     font-size: 11px;
-//   }
-//   @media (min-width: 501px) {
-//     font-size: 12px;
-//   }
-//   @media (min-width: 768px) {
-//     font-size: 14px;
-//   }
-//   @media (min-width: 992px) {
-//     font-size: 16px;
-//   }
-// }
 body {
   font-family: "Roboto", sans-serif;
 }
@@ -952,9 +937,9 @@ $elzero: #2196f3;
 .cust .hex3 {
   background-color: rgb(32, 35, 43);
 }
-.cust .hex5 {
-  // background-color: rgb(38, 45, 58);
-}
+// .cust .hex5 {
+//   // background-color: rgb(38, 45, 58);
+// }
 .cust .hex9 {
   background-color: rgb(49, 120, 198);
   img {
@@ -970,5 +955,5 @@ $elzero: #2196f3;
 .cust .hex11 {
   background-color: rgb(127, 17, 249);
 }
-.cust .hex13 {
-}
+// .cust .hex13 {
+// }
