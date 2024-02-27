@@ -486,6 +486,9 @@ img {
   position: absolute;
   width: -moz-fit-content;
   width: fit-content;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   opacity: 0;
   bottom: 0;
   left: 50%;

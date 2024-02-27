@@ -530,6 +530,7 @@ $elzero: #2196f3;
   .hex-name {
     position: absolute;
     width: fit-content;
+    user-select: none;
     opacity: 0;
     bottom: 0;
     left: 50%;
