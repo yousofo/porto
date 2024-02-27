@@ -1,5 +1,4 @@
 import Swiper from "./swiper-bundle.esm.browser.min.js";
-import {} from "./jquery-3.7.1.min.js"
 const contactBtn = $("#contactBtn");
 const slides = $(".slide-fade");
 const contactBlob = $(".contact-blob");
