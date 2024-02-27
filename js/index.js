@@ -1,8 +1,6 @@
 import Swiper from "./swiper-bundle.esm.browser.min.js";
-const aboutBtn = $("#aboutBtn");
-const cvBtn = $("#cvBtn");
+import {} from "./jquery-3.7.1.min.js"
 const contactBtn = $("#contactBtn");
-const workBtn = $("#workBtn");
 const slides = $(".slide-fade");
 const contactBlob = $(".contact-blob");
 const swiper1 = new Swiper(".swiper1", {
@@ -14,11 +12,6 @@ const swiper1 = new Swiper(".swiper1", {
   noSwiping: true,
   allowTouchMove: false,
 });
-window.onload = () => {
-  $(".skills").addClass("active");
-  //swiper1.slideTo(1);
-  //contactBtn.addClass("active")
-}
 function removeActive(e) {
   $(".active").each((i, e) => e.classList.remove("active"))
   if (e) $(".activeblob").removeClass("activeblob")
@@ -43,6 +36,7 @@ $(function () {
         ].forEach((e) => e.classList.add("active"));
         break;
     }
+
   });
   contactBtn.on("click", function () {
     removeActive()
@@ -57,7 +51,7 @@ $(function () {
       contactBlob.addClass("activeblob active");
     }
   })
-  $(".js-activeBtn").each(function (i) {
+  $(".js-activeBtn").each(function () {
     this.addEventListener("click", () => {
       removeActive(true)
       switch (this.id) {
@@ -69,49 +63,15 @@ $(function () {
 
     })
   })
+  $("#workAbout").on("click", () => {
+    removeActive(true)
+    swiper1.slideTo(0);
+    $(".skills").addClass("active");
+    $("#aboutBtn").addClass("active");
+  })
+  })
+window.onload = () => {
+  $(".skills").addClass("active");
+}
 
-  //start mail management
-  const inName = $("name");
-  const inEmail = $("email");
-  const inMessage = $("message");
-  function sendMail() {
-    var params = {
-      name: inName.value,
-      email: inEmail.value,
-      message: inMessage.value,
-    };
-    emailjs
-      .send("service_olca98c", "template_33wsost", params)
-      .then((res) => {
-        inName.value = "";
-        inEmail.value = "";
-        inMessage.value = "";
-      })
-      .catch((err) => console.log(err));
-  }
-  $("#submit").on("click", (e) => {
-    if (
-      inName.checkValidity() &&
-      inEmail.checkValidity() &&
-      inMessage.checkValidity()
-    ) {
-      e.preventDefault();
-      sendMail();
-    }
-  });
-  //end mail management
-  //start map
-  // function suc(e) {
-  //   console.log(e);
-  // }
-  // navigator.geolocation.getCurrentPosition(suc, suc);
-  // var map = L.map("map").setView([31.03, 31.389], 14);
-  // L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-  //   maxZoom: 19,
-  //   attribution:
-  //     '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-  // }).addTo(map);
-  // var marker = L.marker([31.015, 31.389]).addTo(map);
-  //end map
-})
 

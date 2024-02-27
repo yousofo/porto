@@ -267,7 +267,7 @@ img {
 .port .port-con .main .main-con .intro .skills.active .cust.cust3 {
   transition-delay: 0.192s;
 }
-.port .port-con .main .main-con .intro .skills.active .cust.cust4 {
+.port .port-con .main .main-con .intro .skills.active .cust.cust4, .port .port-con .main .main-con .intro .skills.active .cust.cust12 {
   transition-delay: 0.258s;
 }
 .port .port-con .main .main-con .intro .skills.active .cust.cust5 {
@@ -291,388 +291,6 @@ img {
 .port .port-con .main .main-con .intro .skills.active .cust.cust11 {
   transition-delay: 0.66s;
 }
-.port .port-con .main .main-con .intro .skills.active .cust.cust12 {
-  transition-delay: 0.726s;
-}
-.port .port-con .main .main-con .intro .skills.active .cust.cust13 {
-  transition-delay: 0.792s;
-}
-.port .port-con .main .main-con .about {
-  max-width: 1500px;
-}
-@media (max-width: 767px) {
-  .port .port-con .main .main-con .about {
-    height: 90%;
-  }
-}
-.port .port-con .main .main-con .contact .contact-con #form {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  z-index: 2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-}
-.port .port-con .main .main-con .contact .contact-con #form form {
-  width: 100%;
-  max-width: 320px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding: 20px;
-  border-radius: 3px;
-  position: relative;
-  pointer-events: all;
-  background-color: rgb(255, 255, 255);
-  left: -400px;
-  transition: 0.8s;
-  color: black;
-}
-@media (min-width: 768px) {
-  .port .port-con .main .main-con .contact .contact-con #form form {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-  }
-}
-@media (max-width: 400px) {
-  .port .port-con .main .main-con .contact .contact-con #form form {
-    max-width: 400px;
-    width: calc(100% - 40px);
-    margin: auto;
-    transition: 0s;
-  }
-}
-.port .port-con .main .main-con .contact .contact-con #form form h1 {
-  color: rgb(36, 31, 32);
-}
-.port .port-con .main .main-con .contact .contact-con #form form input,
-.port .port-con .main .main-con .contact .contact-con #form form textarea {
-  padding: 10px 14px;
-  font-size: 1rem;
-  border-radius: 4px;
-  border: 1px solid rgb(190, 190, 190);
-  background-color: transparent;
-  resize: none;
-  caret-color: rgb(0, 255, 0);
-}
-.port .port-con .main .main-con .contact .contact-con #form form input:focus-within,
-.port .port-con .main .main-con .contact .contact-con #form form textarea:focus-within {
-  outline: none;
-}
-@media (max-width: 767px) {
-  .port .port-con .main .main-con .contact .contact-con #form form input,
-  .port .port-con .main .main-con .contact .contact-con #form form textarea {
-    font-size: 1.2rem;
-  }
-}
-.port .port-con .main .main-con .contact .contact-con #form form label {
-  color: #2196f3;
-  font-size: 1.1rem;
-  font-weight: 600;
-}
-@media (max-width: 767px) {
-  .port .port-con .main .main-con .contact .contact-con #form form label {
-    font-size: 1.35rem;
-  }
-}
-.port .port-con .main .main-con .contact .contact-con #form form #submit {
-  color: white;
-  font-weight: bold;
-  letter-spacing: 1px;
-  width: 100%;
-  border: none;
-  cursor: pointer;
-  margin: auto;
-  padding: 10px;
-  background-color: #2196f3;
-}
-.port .port-con .main .main-con .contact .contact-con #form form .img {
-  position: absolute;
-  transition: 1s;
-  rotate: -135deg;
-  transform-origin: bottom left;
-  scale: 0;
-  right: 0;
-  width: 40%;
-  max-width: 200px;
-  top: 0;
-  translate: 7% -75%;
-  cursor: pointer;
-}
-.port .port-con .main .main-con .contact .contact-con #form form .img img {
-  max-width: 100%;
-}
-.port .port-con .main .main-con .contact .contact-con #form form .ss-links {
-  opacity: 0;
-  transition: 1.4s;
-  overflow: hidden;
-}
-@media (min-width: 768px) {
-  .port .port-con .main .main-con .contact .contact-con #form form .ss-links {
-    display: none;
-  }
-}
-.port .port-con .main .main-con .contact .contact-con #form form .ss-links > p {
-  transition: 1s;
-  font-weight: bold;
-  font-size: 1.1rem;
-  position: relative;
-  left: -100%;
-}
-.port .port-con .main .main-con .contact .contact-con #form form .ss-links .ss-links-con {
-  width: 50%;
-  display: flex;
-}
-.port .port-con .main .main-con .contact .contact-con #form form .ss-links .ss-links-con .ss-link {
-  width: 20%;
-  padding: 5px;
-  position: relative;
-  left: 250%;
-}
-.port .port-con .main .main-con .contact .contact-con #form form .ss-links .ss-links-con .ss-link:nth-child(1) {
-  transition: 0.8s ease-out;
-}
-.port .port-con .main .main-con .contact .contact-con #form form .ss-links .ss-links-con .ss-link:nth-child(2) {
-  transition: 1s ease-out;
-}
-.port .port-con .main .main-con .contact .contact-con #form form .ss-links .ss-links-con .ss-link:nth-child(3) {
-  transition: 1.2s ease-out;
-}
-.port .port-con .main .main-con .contact .contact-con #form form .ss-links .ss-links-con .ss-link:nth-child(4) {
-  transition: 1.4s ease-out;
-}
-.port .port-con .main .main-con .contact .contact-con #form form .ss-links .ss-links-con .ss-link:nth-child(5) {
-  transition: 1.6s ease-out;
-}
-.port .port-con .main .main-con .contact .contact-con #form form .ss-links .ss-links-con img {
-  width: 100%;
-  aspect-ratio: 1;
-}
-.port .port-con .main .main-con .contact .contact-con #form form .talk {
-  flex: 1;
-  z-index: -1;
-  pointer-events: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: absolute;
-  top: 50%;
-  translate: 0 -50%;
-  height: 100%;
-  width: 100%;
-  left: 0%;
-  transition: 1s;
-}
-@media (max-width: 767px) {
-  .port .port-con .main .main-con .contact .contact-con #form form .talk {
-    display: none;
-  }
-}
-.port .port-con .main .main-con .contact .contact-con #form form .talk.active {
-  left: 32%;
-}
-.port .port-con .main .main-con .contact .contact-con #form form .talk .con-logo {
-  width: 100%;
-  display: flex;
-  pointer-events: all;
-  justify-content: end;
-  padding: 10px;
-  align-items: center;
-  border-top-right-radius: 35px;
-  border-bottom-right-radius: 35px;
-  position: absolute;
-  left: 0;
-  bottom: 35%;
-  transform-origin: bottom left;
-  transition: 1s 0.3s;
-}
-.port .port-con .main .main-con .contact .contact-con #form form .talk .con-logo img {
-  width: 50px;
-  aspect-ratio: 1;
-  margin-left: 15px;
-}
-.port .port-con .main .main-con .contact .contact-con #form form .talk .con-logo p {
-  transition: 0.5s;
-  opacity: 0;
-  font-size: 1.1rem;
-  font-weight: bold;
-}
-.port .port-con .main .main-con .contact .contact-con #form form .talk .con-logo:hover p {
-  opacity: 1;
-}
-.port .port-con .main .main-con .contact .contact-con #form form .talk .con-github {
-  background-color: rgb(27, 31, 35);
-}
-.port .port-con .main .main-con .contact .contact-con #form form .talk .con-github.active {
-  rotate: -23deg;
-}
-.port .port-con .main .main-con .contact .contact-con #form form .talk .con-whatsapp {
-  background-color: rgb(27, 215, 65);
-}
-.port .port-con .main .main-con .contact .contact-con #form form .talk .con-whatsapp.active {
-  rotate: -11.5deg;
-}
-.port .port-con .main .main-con .contact .contact-con #form form .talk .con-phone {
-  background-color: #ff9001;
-}
-.port .port-con .main .main-con .contact .contact-con #form form .talk .con-phone.active {
-  rotate: 0;
-}
-.port .port-con .main .main-con .contact .contact-con #form form .talk .con-phone:hover {
-  transition: 0.5s ease-out;
-  translate: 35% 0;
-}
-.port .port-con .main .main-con .contact .contact-con #form form .talk .con-mail {
-  background-color: rgb(255, 204, 0);
-  transform-origin: top left;
-}
-.port .port-con .main .main-con .contact .contact-con #form form .talk .con-mail.active {
-  rotate: 11.5deg;
-}
-.port .port-con .main .main-con .contact .contact-con #form form .talk .con-mail:hover {
-  transition: 0.5s ease-out;
-  translate: 50% 53%;
-}
-.port .port-con .main .main-con .contact .contact-con #form form .talk .con-linked {
-  background-color: rgb(243, 219, 230);
-  transform-origin: top left;
-}
-.port .port-con .main .main-con .contact .contact-con #form form .talk .con-linked.active {
-  rotate: 23deg;
-}
-.port .port-con .main .main-con .contact .contact-con #form .hello {
-  height: 520px;
-  padding: 2px;
-  width: 300px;
-  position: relative;
-  z-index: 99;
-  border-radius: 17px;
-  border-top-left-radius: 2px;
-  border-bottom-left-radius: 2px;
-  background: linear-gradient(rgb(0, 243, 130), rgb(0, 181, 96));
-}
-@media (max-width: 768px) {
-  .port .port-con .main .main-con .contact .contact-con #form .hello {
-    display: none;
-  }
-}
-.port .port-con .main .main-con .contact .contact-con #form .hello .hello-in {
-  position: relative;
-  border-radius: 17px;
-  border-top-left-radius: 2px;
-  border-bottom-left-radius: 2px;
-  pointer-events: all;
-  padding: 20px;
-  color: rgb(255, 255, 255);
-  height: 100%;
-  width: 100%;
-  padding-top: 25px;
-}
-.port .port-con .main .main-con .contact .contact-con #form .hello .hello-in .exit {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 50px;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  translate: -35% -35%;
-  background: linear-gradient(315deg, rgb(0, 243, 130), rgb(0, 181, 96));
-  z-index: 1;
-}
-.port .port-con .main .main-con .contact .contact-con #form .hello .hello-in .exit::after {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  translate: -50% -50%;
-  content: "";
-  border-radius: 50%;
-  background-color: rgb(255, 255, 255);
-  width: 92%;
-  height: 92%;
-  z-index: -1;
-}
-.port .port-con .main .main-con .contact .contact-con #form .hello .hello-in .exit i {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  translate: -50% -50%;
-  z-index: 2;
-  font-size: 2rem;
-  color: black;
-}
-.port .port-con .main .main-con .contact .contact-con #form .hello .hello-in .hello-con {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  overflow: hidden;
-  position: relative;
-}
-.port .port-con .main .main-con .contact .contact-con #form .hello .hello-in .hello-con h1 {
-  font-size: 2.5rem;
-  position: relative;
-  line-height: 1.5;
-  transition: 1s;
-  left: 100%;
-}
-.port .port-con .main .main-con .contact .contact-con #form .hello .hello-in .hello-con p {
-  font-size: 1.1rem;
-  position: relative;
-  transition: 1s;
-  left: -100%;
-  line-height: 1.3;
-  font-weight: bold;
-}
-.port .port-con .main .main-con .contact .contact-con #form.active form {
-  left: 0;
-}
-.port .port-con .main .main-con .contact .contact-con #form.active form > .img {
-  scale: 1;
-  rotate: -5deg;
-}
-.port .port-con .main .main-con .contact .contact-con #form.active form .ss-links {
-  opacity: 1;
-}
-.port .port-con .main .main-con .contact .contact-con #form.active form .ss-links > p {
-  left: 0;
-}
-.port .port-con .main .main-con .contact .contact-con #form.active form .ss-links .ss-links-con .ss-link {
-  left: 0;
-}
-.port .port-con .main .main-con .contact .contact-con #form.active .hello h1,
-.port .port-con .main .main-con .contact .contact-con #form.active .hello p {
-  left: 0 !important;
-}
-.port .port-con .main .main-con .contact .contact-con #ynmap {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: 1;
-}
-.port .port-con .main .main-con .contact .contact-con #ynmap #map {
-  width: 100%;
-  height: 100%;
-  z-index: 2;
-}
-.port .port-con .main .main-con .contact .contact-con #ynmap::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  z-index: 3;
-  background-color: rgba(0, 0, 0, 0.8);
-}
 .port .port-con .main .main-con .work {
   display: flex;
   flex-direction: column;
@@ -680,8 +298,6 @@ img {
 }
 .port .port-con .main .main-con .work .work-con {
   color: rgb(153, 153, 153);
-  border-left: 1px solid rgb(65, 65, 65);
-  border-right: 1px solid rgb(65, 65, 65);
 }
 .port .port-con .main .main-con .work .work-con nav {
   border-bottom: 1px solid rgb(65, 65, 65);
@@ -697,30 +313,10 @@ img {
   border-color: #f09f00;
   color: white;
 }
-.port .port-con .main .main-con .work .work-con section {
-  height: calc(100% - 150px);
-  overflow-y: auto;
-  margin: 28px 15px 0 0;
-}
-.port .port-con .main .main-con .work .work-con section .work-items {
-  height: 100%;
-}
-.port .port-con .main .main-con .work .work-con section::-webkit-scrollbar {
-  width: 8px;
-}
-.port .port-con .main .main-con .work .work-con section::-webkit-scrollbar-track {
-  background: rgba(139, 139, 139, 0.4862745098);
-  border-radius: 6px;
-}
-.port .port-con .main .main-con .work .work-con section::-webkit-scrollbar-thumb {
-  border-radius: 4px;
-  background: #666666;
-}
-.port .port-con .main .main-con .work .work-con section::-webkit-scrollbar-thumb:hover {
-  background: #222222;
-}
-.port .port-con .main .main-con .work .work-con section h2 {
-  border-bottom: 1px solid rgb(65, 65, 65);
+.port .port-con .main .main-con .work .work-con > .box .item .tech span {
+  background-color: #dd8809;
+  padding: 2px 3px;
+  border-radius: 2px;
 }
 .port .port-con .contact-blob {
   transition: 0.5s;
@@ -731,7 +327,9 @@ img {
   border-radius: 50%;
 }
 .port .port-con .contact-blob.active {
-  background-color: rgb(32, 32, 32);
+  background-color: #121212;
+  transform: 0.3s;
+  color: rgb(229, 231, 235);
   width: 100vw;
   height: 100vh;
   left: 0;
@@ -756,10 +354,6 @@ img {
 
 .swiper1 {
   height: 100vh;
-}
-
-.swiper-slide {
-  height: 100%;
 }
 
 @keyframes rotate1 {
@@ -896,34 +490,30 @@ img {
   left: 50%;
   bottom: 50%;
 }
-
 .cust .hex1 {
   background-color: rgb(33, 150, 243);
 }
-
 .cust .hex2 {
   background-color: rgb(255, 87, 34);
 }
-
 .cust .hex3 {
   background-color: rgb(32, 35, 43);
 }
-
 .cust .hex9 {
   background-color: rgb(49, 120, 198);
 }
 .cust .hex9 img {
   width: 140%;
 }
-
 .cust .hex8 {
   background-color: #f0db4f;
 }
-
 .cust .hex10 {
-  background: rgb(9, 9, 1);
+  background: #f05134;
 }
-
 .cust .hex11 {
   background-color: rgb(127, 17, 249);
+}
+.cust .hex12 {
+  background-color: #193556;
 }/*# sourceMappingURL=main.css.map */
