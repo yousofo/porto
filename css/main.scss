@@ -376,16 +376,18 @@ $elzero: #2196f3;
       left: calc(50% - 125px);
       z-index: 999;
       border-radius: 50%;
-    }
-    .contact-blob.active {
-      background-color: #121212;
-      transform: .3s;
-      color: rgba(229, 231, 235, 1);
-      width: 100vw;
-      height: 100vh;
-      left: 0;
-      bottom: 0;
-      border-radius: 0%;
+      user-select: none;
+      &.active {
+        background-color: #121212;
+        transform: .3s;
+        color: rgba(229, 231, 235, 1);
+        width: 100vw;
+        height: 100vh;
+        left: 0;
+        bottom: 0;
+        border-radius: 0%;
+        user-select: all;
+      }
     }
   }
 }

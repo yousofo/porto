@@ -1304,6 +1304,9 @@ img {
   left: calc(50% - 125px);
   z-index: 999;
   border-radius: 50%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
 }
 
 .port .port-con .contact-blob.active {
@@ -1315,6 +1318,9 @@ img {
   left: 0;
   bottom: 0;
   border-radius: 0%;
+  -webkit-user-select: all;
+  -moz-user-select: all;
+  user-select: all;
 }
 
 .slide-fade {
