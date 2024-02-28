@@ -377,6 +377,7 @@ $elzero: #2196f3;
       z-index: 999;
       border-radius: 50%;
       user-select: none;
+      color: transparent;
       &.active {
         background-color: #121212;
         transform: .3s;
@@ -387,6 +388,9 @@ $elzero: #2196f3;
         bottom: 0;
         border-radius: 0%;
         user-select: auto;
+        a{
+          color: rgb(2, 132, 199);
+        }
       }
     }
   }

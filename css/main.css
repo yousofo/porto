@@ -328,6 +328,7 @@ img {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+  color: transparent;
 }
 .port .port-con .contact-blob.active {
   background-color: #121212;
@@ -341,6 +342,9 @@ img {
   -webkit-user-select: auto;
      -moz-user-select: auto;
           user-select: auto;
+}
+.port .port-con .contact-blob.active a {
+  color: rgb(2, 132, 199);
 }
 
 .slide-fade {
