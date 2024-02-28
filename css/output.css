@@ -1566,6 +1566,15 @@ img {
   .sm\:gap-0 {
     gap: 0px;
   }
+
+  .sm\:bg-transparent {
+    background-color: transparent;
+  }
+
+  .sm\:bg-white {
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  }
 }
 
 @media (min-width: 768px) {
