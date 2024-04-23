@@ -20,19 +20,20 @@
   <div class="port">
     <div class="port-con relative">
       <!--start main -->
-      <div class="main">
+      <main class="main">
         <div class="main-con flex h-fit min-h-screen relative flex-col items-center">
           <!-- top background color -->
           <div class="color w-full h-2/5 absolute top-0 left-0"></div>
           <!-- start main slides -->
           <div class="swiper swiper1 ">
-            <div class="swiper-wrapper flex">
+            <div class="swiper-wrapper swiper1-wrapper flex">
               <!-- intro slide -->
               <div class="swiper-slide">
                 <div
-                  class="intro slide-fade fade-true w-full m-auto h-full p-7 relative flex flex-col items-center gap-2 sm:gap-0 sm:justify-between sm:flex-row justify-center">
+                  class="intro w-full m-auto h-full p-7 relative flex flex-col items-center gap-2 sm:gap-0 sm:justify-between sm:flex-row justify-center">
                   <div class="name overflow-hidden sm:me-2 text-white tracking-wide">
-                    <h2 class="font-bold text-5xl whitespace-nowrap">Hello! <span class="text-4xl">I'm Yousef</span></h2>
+                    <h2 class="font-bold text-5xl whitespace-nowrap">Hello! <span class="text-4xl">I'm Yousef</span>
+                    </h2>
                     <p class="offers text text-white mt-1 text-2xl">
                       I'm a <span>web developer</span> and I love building <span>web apps</span>!
                     </p>
@@ -138,95 +139,163 @@
                 </div>
               </div>
               <!-- work slide -->
-              <div class="swiper-slide overflow-y-auto work px-8 pb-14 pt-2 flex flex-col">
-                <div class="work-con container w-full slide-fade m-auto text-white flex-1">
-                  <nav class="flex justify-between font-semibold items-end">
-                    <h2 class="p-3 ps-0 text-gray-50 text-xl md:text-2xl">Recent Work</h2>
-                    <ul class="flex -me-3">
-                      <li id="workAbout" class="p-3 py-2 text-sm md:py-3">About</li>
-                    </ul>
-                  </nav>
-                  <section class="grid box md:grid-cols-2 lg:grid-cols-3 py-8 gap-6  m-auto">
-                    <div class="item relative aspect-video">
-                      <img src="./media/projects/netflix-preview.png" alt="">
-                      <div class="text flex flex-col gap-2 w-full absolute bottom-0 left-0 p-4 bg-black bg-opacity-70">
-                        <h3 class="text-gray-100 font-bold">Netflix Clone</h3>
-                        <a class="text-sky-600" target="_blank" href="https://netflix-practice-clone-yn.netlify.app">
-                          https://netflix-practice-clone-yn.netlify.app
-                        </a>
-                        <div class="tech text-xs text-black font-bold">
-                          <span>React</span>
-                          <span>Tailwind</span>
-                          <span>Sass</span>
+              <div class="swiper-slide  work sm:px-8 pb-14 pt-2 flex flex-col ">
+                <div class="work-con container w-full m-auto text-white flex-1 flex flex-col ">
+                  <!-- <section class="grid box md:grid-cols-2 lg:grid-cols-3 py-8 gap-6  m-auto"> -->
+                  <section class="w-5/6 box m-auto flex-1 flex items-center">
+                    <div class="swiper swiper2 overflow-visible">
+                      <div class="swiper-wrapper">
+                        <div class="item swiper-slide relative aspect-video">
+                          <img src="/media/projects/admin-dashboard.png" alt="">
+                          <div class="text flex flex-col gap-2 w-full py-4  ">
+                            <div class="flex justify-between items-center">
+                              <h3 class="text-gray-100 font-bold capitalize">admin dashboard</h3>
+                              <div class="tech text-xs text-black font-bold">
+                                <span>React</span>
+                                <span>react-redux</span>
+                                <span>redux toolkit</span>
+                                <span>chart.js</span>
+                                <span>Tailwind</span>
+                                <span>Sass</span>
+                              </div>
+                            </div>
+                            <p>
+                              live preview: <a class="text-sky-600" target="_blank" href="https://dashboard-yn.netlify.app/">
+                                click to preview
+                              </a>
+                            </p>
+                            <p>
+                              code: <a class="text-sky-600" target="_blank" href="https://github.com/yousofo/dashboard-18-4-24">
+                                click to preview
+                              </a>
+                            </p>
+                          </div>
                         </div>
-                      </div>
-                    </div>
-                    <div class="item relative aspect-video">
-                      <img src="./media/projects/laptop-shop-demo.png" alt="">
-                      <div class="text flex flex-col gap-2 w-full absolute bottom-0 left-0 p-4 bg-black bg-opacity-70">
-                        <h3 class="text-gray-100 font-bold">TopLap Store</h3>
-                        <a class="text-sky-600" target="_blank" href="https://laptop-shop-yn.netlify.app">
-                          https://laptop-shop-yn.netlify.app
-                        </a>
-                        <div class="tech text-xs text-black font-bold">
-                          <span>React</span>
-                          <span>Tailwind</span>
+                        <div class="item swiper-slide relative aspect-video">
+                          <!-- <img src="./media/projects/netflix-preview.png" alt=""> -->
+                          <video autoplay loop src="/media/projects/netflix-clone-preview.mp4"></video>
+                          <div class="text flex flex-col gap-2 w-full py-4  ">
+                            <div class="flex justify-between items-center">
+                              <h3 class="text-gray-100 font-bold">Netflix Clone</h3>
+                              <div class="tech text-xs text-black font-bold">
+                                <span>React</span>
+                                <span>Tailwind</span>
+                                <span>Sass</span>
+                              </div>
+                            </div>
+                            <div>
+                              code: <a class="text-sky-600" target="_blank"
+                                href="https://github.com/yousofo/netflix-clone">
+                                click to preview
+                              </a>
+                            </div>
+
+                          </div>
                         </div>
-                      </div>
-                    </div>
-                    <div class="item relative aspect-video">
-                      <img src="./media/projects/simple-shop-preview.png" alt="">
-                      <div class="text flex flex-col gap-2 w-full absolute bottom-0 left-0 p-4 bg-black bg-opacity-70">
-                        <h3 class="text-gray-100 font-bold">Simple Shop</h3>
-                        <a class="text-sky-600" target="_blank" href="https://simple-store-yn.netlify.app">
-                          https://simple-store-yn.netlify.app
-                        </a>
-                        <div class="tech text-xs text-black font-bold">
-                          <span>React</span>
-                          <span>Tailwind</span>
-                          <span>Sass</span>
+                        <div class="item swiper-slide relative aspect-video">
+                          <img src="./media/projects/laptop-shop-demo.png" alt="">
+                          <div class="text flex flex-col gap-2 w-full py-4  ">
+                            <div class="flex justify-between items-center">
+                              <h3 class="text-gray-100 font-bold">TopLap Store</h3>
+                              <div class="tech text-xs text-black font-bold">
+                                <span>React</span>
+                                <span>Tailwind</span>
+                              </div>
+                            </div>
+                            <div>
+                              live preview: <a class="text-sky-600" target="_blank"
+                                href="https://laptop-shop-yn.netlify.app">
+                                click to preview
+                              </a>
+                            </div>
+
+
+                          </div>
                         </div>
-                      </div>
-                    </div>
-                    <div class="item relative aspect-video">
-                      <img src="./media/projects/rocker-preview.png" alt="">
-                      <div class="text flex flex-col gap-2 w-full absolute bottom-0 left-0 p-4 bg-black bg-opacity-70">
-                        <h3 class="text-gray-100 font-bold">Rocker</h3>
-                        <a class="text-sky-600" target="_blank" href="https://rocker-yn.netlify.app">
-                          https://rocker-yn.netlify.app
-                        </a>
-                        <div class="tech text-xs text-black font-bold">
-                          <span>React</span>
-                          <span>Sass</span>
+                        <div class="item swiper-slide relative aspect-video">
+                          <img src="./media/projects/simple-shop-preview.png" alt="">
+                          <div class="text flex flex-col gap-2 w-full py-4  ">
+                            <div class="flex justify-between items-center">
+                              <h3 class="text-gray-100 font-bold">Simple Shop</h3>
+                              <div class="tech text-xs text-black font-bold">
+                                <span>React</span>
+                                <span>Tailwind</span>
+                                <span>Sass</span>
+                              </div>
+                            </div>
+                            <div>
+                              live preview: <a class="text-sky-600" target="_blank"
+                                href="https://simple-store-yn.netlify.app">
+                                click to preview
+                              </a>
+                            </div>
+
+                          </div>
                         </div>
-                      </div>
-                    </div>
-                    <div class="item relative aspect-video">
-                      <img src="./media/projects/demo1-preview.png" alt="">
-                      <div
-                        class="text flex flex-col gap-2 w-full absolute bottom-0 left-0 p-3 md:p-4 bg-black bg-opacity-70">
-                        <h3 class="text-gray-100 font-bold">Demo 1</h3>
-                        <a class="text-sky-600" target="_blank" href="https://demo1-yn.netlify.app">
-                          https://demo1-yn.netlify.app
-                        </a>
-                        <div class="tech text-xs text-black font-bold">
-                          <span>Html</span>
-                          <span>Sass</span>
-                          <span>JavaScript</span>
+                        <div class="item swiper-slide relative aspect-video">
+                          <img src="./media/projects/rocker-preview.png" alt="">
+                          <div class="text flex flex-col gap-2 w-full py-4  ">
+                            <div class="flex justify-between items-center">
+                              <h3 class="text-gray-100 font-bold">Rocker</h3>
+                              <div class="tech text-xs text-black font-bold">
+                                <span>React</span>
+                                <span>Sass</span>
+                              </div>
+                            </div>
+                            <div>
+                              live preview: <a class="text-sky-600" target="_blank" href="https://rocker-yn.netlify.app">
+                                click to preview
+                              </a>
+                            </div>
+
+                          </div>
+                        </div>
+                        <div class="item swiper-slide relative aspect-video">
+                          <img src="./media/projects/demo1-preview.png" alt="">
+                          <div class="text flex flex-col gap-2 w-full py-4">
+                            <div class="flex justify-between items-center">
+                              <h3 class="text-gray-100 font-bold">Demo 1</h3>
+                              <div class="tech text-xs text-black font-bold">
+                                <span>Html</span>
+                                <span>Sass</span>
+                                <span>JavaScript</span>
+                              </div>
+                            </div>
+                            <div>
+                              live preview: <a class="text-sky-600" target="_blank" href="https://demo1-yn.netlify.app">
+                                click to preview
+                              </a>
+                            </div>
+
+                          </div>
                         </div>
                       </div>
                     </div>
                   </section>
                 </div>
               </div>
+              <!-- contact slide -->
+              <div class="swiper-slide contact-blob p-8 flex flex-col gap-3.5 items-center justify-center">
+                <h2 class="text-2xl mb-2">Youssef Nabil Alsayed</h2>
+                <p>Mansoura, Dakahlia, Egypt</p>
+                <p>+201016686024</p>
+                <a class="underline" target="_blank" href="mailto:jon772002@gmail.com">jon772002@gmail.com</a>
+                <a class="underline" target="_blank"
+                  href="https://api.whatsapp.com/send/?phone=201016686024&text&type=phone_number&app_absent=0">
+                  Message me on Whatsapp
+                </a>
+                <p>Resume: <a class="underline" target="_blank"
+                    href="https://drive.google.com/file/d/1jA9k2vd63ndzKSrnsgr8Gl2syp3GVHvc/view?usp=sharing">Click to
+                    view</a></p>
+              </div>
             </div>
           </div>
           <!-- end main slides -->
         </div>
-      </div>
+      </main>
       <!--end main -->
       <!-- start nav -->
-      <div class="nav left-0 w-screen fixed bottom-0 pb-8 bg-[#121212] sm:bg-transparent">
+      <nav class="nav left-0 w-screen fixed bottom-0 pb-8 bg-[#121212] sm:bg-transparent">
         <div class="nav-con relative flex justify-center p-1.5 m-auto gap-1.5 w-max rounded-md">
           <div class="blobs">
             <div class="blob"></div>
@@ -245,30 +314,18 @@
               id="workBtn">
               Recent Works
             </li>
-            <li class=" rounded-md border-nborder border p-2 cursor-pointer  hover:text-white hover:border-white"
+            <li
+              class=" rounded-md border-nborder border p-2 cursor-pointer  hover:text-white hover:border-white js-activeBtn"
               id="contactBtn">
               Contact & CV
             </li>
           </ul>
         </div>
-      </div>
-      <div
-        class="contact-blob fixed bottom-8 p-8 flex flex-col gap-4 items-center justify-center">
-        <h2 class="text-2xl mb-4">Youssef Nabil Alsayed</h2>
-        <p>Mansoura, Dakahlia, Egypt</p>
-        <p>+201016686024</p>
-        <a class="underline" target="_blank" href="mailto:jon772002@gmail.com">jon772002@gmail.com</a>
-        <a class="underline" target="_blank"
-          href="https://api.whatsapp.com/send/?phone=201016686024&text&type=phone_number&app_absent=0">
-          Message me on Whatsapp
-        </a>
-        <p>Resume: <a class="underline" target="_blank"
-          
-            href="https://drive.google.com/file/d/1jA9k2vd63ndzKSrnsgr8Gl2syp3GVHvc/view?usp=sharing">Click to
-            view</a></p>
-      </div>
+      </nav>
+
       <!-- end nav -->
     </div>
+    <div class="loader fixed"></div>
   </div>
 
   <script type="module" src="./js/jquery-3.7.1.min.js"></script>

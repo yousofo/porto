@@ -24,6 +24,7 @@ $color1: rgb(135, 125, 195);
 $color1: rgb(11, 17, 30);
 $itemBG1: rgb(40, 40, 40);
 $mainBG1: rgb(31, 16, 71);
+$mainBG2: rgb(18, 18, 18);
 $bg1: #eaf5f0;
 $green1: rgb(111, 255, 183);
 $green2: #4caf50;
@@ -59,7 +60,33 @@ $elzero: #2196f3;
 //
 //
 .port {
+  background-color: $mainBG2;
+  .loader {
+    width: 50px;
+    height: 50px;
+    left: 50%;
+    top: 50%;
+    opacity: 1;
+    transition: 0.3s;
+    transform: translate(-50%, -50%);
+    transform-origin: 0% 0%;
+    border-radius: 50%;
+    background: conic-gradient(rgba(255, 0, 0, 0), rgba(255, 0, 0, 1));
+    animation: spin 0.7s infinite linear;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 90%;
+      height: 90%;
+      left: 5%;
+      top: 5%;
+      border-radius: 50%;
+      background-color: $mainBG2;
+    }
+  }
   .port-con {
+    opacity: 0;
+    transition: 0.3s;
     .nav {
       z-index: 99999999;
       .nav-con {
@@ -199,7 +226,7 @@ $elzero: #2196f3;
       }
     }
     .main {
-      background-color: rgb(34, 34, 34);
+      background-color: $mainBG2;
       position: relative;
       z-index: 1;
       .main-con {
@@ -285,7 +312,7 @@ $elzero: #2196f3;
             }
             .col2,
             .col4 {
-              top: ($hexagon-size / 2 + 0.25rem);
+              top: calc($hexagon-size / 2 + 0.25rem);
               @media (max-width: 767px) {
                 top: calc(4rem / 2 + 0.25rem);
               }
@@ -358,10 +385,26 @@ $elzero: #2196f3;
             }
             > .box {
               .item {
-                .tech span {
-                  background-color: $yn-gold;
-                  padding: 2px 3px;
-                  border-radius: 2px;
+                .text {
+                  > div {
+                    flex-direction: column;
+                    align-items: start;
+                    gap: 6px;
+                    .tech {
+                      display: flex;
+                      flex-wrap: wrap;
+                      gap: 4px;
+                      span {
+                        background-color: $yn-gold;
+                        display: inline-block;
+                        padding: 2px 3px;
+                        border-radius: 2px;
+                      }
+                    }
+                  }
+                  a {
+                    width: fit-content;
+                  }
                 }
               }
             }
@@ -370,29 +413,22 @@ $elzero: #2196f3;
       }
     }
     .contact-blob {
+      background-color: $mainBG2;
       transition: 0.5s;
-      width: 250px;
-      height: 0;
-      left: calc(50% - 125px);
       z-index: 999;
-      border-radius: 50%;
-      user-select: none;
-      color: transparent;
-      &.active {
-        background-color: #121212;
-        transform: .3s;
-        color: rgba(229, 231, 235, 1);
-        width: 100vw;
-        height: 100vh;
-        left: 0;
-        bottom: 0;
-        border-radius: 0%;
-        user-select: auto;
-        a{
-          color: rgb(2, 132, 199);
-        }
+      color: rgba(229, 231, 235, 1);
+      a {
+        color: rgb(2, 132, 199);
       }
     }
+  }
+}
+.port.loaded {
+  > .loader {
+    opacity: 0;
+  }
+  > .port-con {
+    opacity: 1;
   }
 }
 .slide-fade {
@@ -416,6 +452,11 @@ $elzero: #2196f3;
     transform: rotate3d(0, 1, 0, 360deg);
   }
 }
+@keyframes spin {
+  to {
+    rotate: 360deg;
+  }
+}
 @keyframes move1 {
   0%,
   100% {
@@ -431,7 +472,17 @@ $elzero: #2196f3;
     translate: 0 -100px;
   }
 }
-
+.swiper2 .swiper-slide > .text {
+  display: none;
+  opacity: 0;
+  transition: 0.3s;
+  // flex-direction: column;
+  // gap: 8px;
+}
+.swiper2 .swiper-slide-active > .text {
+  display: flex;
+  opacity: 1;
+}
 .cust {
   width: $hexagon-size;
   @media (max-width: 767px) {
@@ -467,9 +518,9 @@ $elzero: #2196f3;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: ($hexagon-size * 0.645);
+    width: calc($hexagon-size * 0.645);
     height: $hexagon-size;
-    border-radius: ($hexagon-size / 10);
+    border-radius: calc($hexagon-size / 10);
     scale: 0.5;
     @media (max-width: 767px) {
       width: calc(4rem * 0.645);
@@ -573,3 +624,9 @@ $elzero: #2196f3;
     background-color: #193556;
   }
 }
+// .swiper1-wrapper > .swiper-slide{
+//   pointer-events: none;
+// }
+// .swiper1-wrapper > .swiper-slide-active{
+//   pointer-events: all;
+// }

@@ -42,6 +42,36 @@ img {
     background-color: rgb(12, 41, 49);
   }
 }
+.port {
+  background-color: rgb(18, 18, 18);
+}
+.port .loader {
+  width: 50px;
+  height: 50px;
+  left: 50%;
+  top: 50%;
+  opacity: 1;
+  transition: 0.3s;
+  transform: translate(-50%, -50%);
+  transform-origin: 0% 0%;
+  border-radius: 50%;
+  background: conic-gradient(rgba(255, 0, 0, 0), rgb(255, 0, 0));
+  animation: spin 0.7s infinite linear;
+}
+.port .loader::after {
+  content: "";
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  left: 5%;
+  top: 5%;
+  border-radius: 50%;
+  background-color: rgb(18, 18, 18);
+}
+.port .port-con {
+  opacity: 0;
+  transition: 0.3s;
+}
 .port .port-con .nav {
   z-index: 99999999;
 }
@@ -163,7 +193,7 @@ img {
   }
 }
 .port .port-con .main {
-  background-color: rgb(34, 34, 34);
+  background-color: rgb(18, 18, 18);
   position: relative;
   z-index: 1;
 }
@@ -313,38 +343,41 @@ img {
   border-color: #f09f00;
   color: white;
 }
-.port .port-con .main .main-con .work .work-con > .box .item .tech span {
+.port .port-con .main .main-con .work .work-con > .box .item .text > div {
+  flex-direction: column;
+  align-items: start;
+  gap: 6px;
+}
+.port .port-con .main .main-con .work .work-con > .box .item .text > div .tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+.port .port-con .main .main-con .work .work-con > .box .item .text > div .tech span {
   background-color: #dd8809;
+  display: inline-block;
   padding: 2px 3px;
   border-radius: 2px;
 }
+.port .port-con .main .main-con .work .work-con > .box .item .text a {
+  width: -moz-fit-content;
+  width: fit-content;
+}
 .port .port-con .contact-blob {
+  background-color: rgb(18, 18, 18);
   transition: 0.5s;
-  width: 250px;
-  height: 0;
-  left: calc(50% - 125px);
   z-index: 999;
-  border-radius: 50%;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-  color: transparent;
-}
-.port .port-con .contact-blob.active {
-  background-color: #121212;
-  transform: 0.3s;
   color: rgb(229, 231, 235);
-  width: 100vw;
-  height: 100vh;
-  left: 0;
-  bottom: 0;
-  border-radius: 0%;
-  -webkit-user-select: auto;
-     -moz-user-select: auto;
-          user-select: auto;
 }
-.port .port-con .contact-blob.active a {
+.port .port-con .contact-blob a {
   color: rgb(2, 132, 199);
+}
+
+.port.loaded > .loader {
+  opacity: 0;
+}
+.port.loaded > .port-con {
+  opacity: 1;
 }
 
 .slide-fade {
@@ -371,6 +404,11 @@ img {
     transform: rotate3d(0, 1, 0, 360deg);
   }
 }
+@keyframes spin {
+  to {
+    rotate: 360deg;
+  }
+}
 @keyframes move1 {
   0%, 100% {
     translate: 150px 0;
@@ -385,6 +423,17 @@ img {
     translate: 0 -100px;
   }
 }
+.swiper2 .swiper-slide > .text {
+  display: none;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.swiper2 .swiper-slide-active > .text {
+  display: flex;
+  opacity: 1;
+}
+
 .cust {
   width: 5rem;
   display: flex;
