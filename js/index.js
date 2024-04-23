@@ -83,13 +83,11 @@ $(function () {
 })
 
 window.onload = () => {
+  $(".port").addClass("loaded")
   setTimeout(() => {
-    $(".port").addClass("loaded")
-    setTimeout(() => {
-      $(".skills").addClass("active");
-      $(".loader").hide(100)
-    }, 300);
-  }, 2000);
+    $(".skills").addClass("active");
+    $(".loader").hide(100)
+  }, 300);
 }
 
 
