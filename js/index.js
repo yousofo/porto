@@ -1,4 +1,5 @@
 import Swiper from "./swiper-bundle.esm.browser.min.js";
+// import { Navigation, Pagination } from './swiper-bundle.esm.browser.min.js';
 const swiper1 = new Swiper(".swiper1", {
   loop: true,
   slidesPerView: 1,
@@ -16,6 +17,10 @@ const swiper2 = new Swiper(".swiper2", {
   slidesPerView: 1,
   effect: "coverflow",
   spaceBetween: -20,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
   breakpoints: {
     640: {
       spaceBetween: 50,
