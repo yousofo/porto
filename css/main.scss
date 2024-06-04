@@ -18,6 +18,7 @@ body {
 }
 img {
   display: flex;
+  user-select: none;
 }
 $color1: rgb(163, 149, 233);
 $color1: rgb(135, 125, 195);
