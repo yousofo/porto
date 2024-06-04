@@ -879,6 +879,9 @@ body {
 
 img {
   display: flex;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
 }
 
 @media (max-width: 767px) {
